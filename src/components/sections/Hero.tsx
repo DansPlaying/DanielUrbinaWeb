@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { motion } from "framer-motion";
 import { TypeAnimation } from "react-type-animation";
 import { Button } from "@/components/ui/Button";
@@ -94,9 +95,8 @@ export function Hero() {
               animate="visible"
               transition={{ duration: 0.6, delay: 0.5 }}
             >
-              I build modern web applications with clean code and great user
-              experiences. Passionate about turning ideas into reality through
-              technology.
+              Building scalable web applications with Laravel, Angular, and Vue.js.
+              Focused on clean code, RESTful APIs, and delivering great user experiences.
             </motion.p>
 
             <motion.div
@@ -140,7 +140,7 @@ export function Hero() {
             </motion.div>
           </div>
 
-          {/* Right: Profile photo placeholder */}
+          {/* Right: Profile photo */}
           <motion.div
             className="flex justify-center lg:justify-end"
             variants={scaleIn}
@@ -148,13 +148,18 @@ export function Hero() {
             animate="visible"
             transition={{ duration: 0.8, delay: 0.5, ease: [0.16, 1, 0.3, 1] }}
           >
-            <div className="relative">
+            <div className="relative animate-float">
               <div className="absolute inset-0 bg-gradient-accent rounded-full blur-md opacity-50 scale-105" />
               <div className="relative rounded-full p-1 bg-gradient-to-br from-accent to-accent-purple">
-                <div className="w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 rounded-full bg-background-secondary flex items-center justify-center animate-float">
-                  <span className="text-6xl font-bold bg-gradient-accent bg-clip-text text-transparent">
-                    DU
-                  </span>
+                <div className="w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 rounded-full overflow-hidden">
+                  <Image
+                    src="/images/profile/daniel-urbina-photo.webp"
+                    alt="Daniel Urbina"
+                    width={384}
+                    height={384}
+                    className="w-full h-full object-cover object-top"
+                    priority
+                  />
                 </div>
               </div>
             </div>
