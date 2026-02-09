@@ -306,13 +306,13 @@ Build components with real content (not dummy data) to catch layout issues early
 - [x] Swap placeholder logo for final logo (when Phase 2B completes)
 
 ### Phase 4A - Essential Animations
-- [ ] Add scroll-triggered fade-in animations (Framer Motion + Intersection Observer)
+- [x] Add scroll-triggered fade-in animations (Framer Motion + Intersection Observer) — ScrollReveal component + section animations
 - [x] Add hover interactions on cards (lift, glow) — built into Skill/Project/Experience cards
-- [ ] Add page transition animations
-- [ ] SVG logo draw-in animation
+- [ ] Add page transition animations (deferred — requires route changes, single-page for now)
+- [x] SVG logo draw-in animation — Logo component with animate prop
 - [x] Smooth scroll — enabled via `scroll-behavior: smooth` in globals.css
-- [ ] Active nav link tracking (Intersection Observer)
-- [ ] Verify all animations respect `prefers-reduced-motion`
+- [x] Active nav link tracking (Intersection Observer) — Navbar tracks active section
+- [x] Verify all animations respect `prefers-reduced-motion` — MotionConfig reducedMotion="user" + CSS rule
 
 ### Phase 4B - Three.js Hero (optional, time-boxed to 2 days)
 - [ ] Add hero background effect (particles / 3D geometry) — desktop only

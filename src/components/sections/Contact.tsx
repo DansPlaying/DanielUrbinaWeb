@@ -4,6 +4,7 @@ import { useState, FormEvent } from "react";
 import { Send, Loader2 } from "lucide-react";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { Button } from "@/components/ui/Button";
+import { ScrollReveal } from "@/components/ui/ScrollReveal";
 
 type FormStatus = "idle" | "loading" | "success" | "error";
 
@@ -54,11 +55,13 @@ export function Contact() {
   return (
     <section id="contact" className="py-16 md:py-20 lg:py-24 bg-background-secondary">
       <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-        <SectionHeading
-          title="Let's Work"
-          highlight="Together"
-          description="Have a project in mind? Let's discuss how I can help."
-        />
+        <ScrollReveal>
+          <SectionHeading
+            title="Let's Work"
+            highlight="Together"
+            description="Have a project in mind? Let's discuss how I can help."
+          />
+        </ScrollReveal>
 
         {/* Status messages */}
         {status === "success" && (
@@ -72,7 +75,8 @@ export function Contact() {
           </div>
         )}
 
-        <form onSubmit={handleSubmit} className="space-y-6">
+        <ScrollReveal delay={0.1}>
+          <form onSubmit={handleSubmit} className="space-y-6">
           {/* Honeypot */}
           <input
             type="text"
@@ -169,25 +173,28 @@ export function Contact() {
               </>
             )}
           </Button>
-        </form>
+          </form>
+        </ScrollReveal>
 
-        {/* Divider */}
-        <div className="flex items-center gap-4 my-12">
-          <div className="flex-1 h-px bg-border" />
-          <span className="text-text-secondary text-sm">or</span>
-          <div className="flex-1 h-px bg-border" />
-        </div>
+        <ScrollReveal delay={0.2}>
+          {/* Divider */}
+          <div className="flex items-center gap-4 my-12">
+            <div className="flex-1 h-px bg-border" />
+            <span className="text-text-secondary text-sm">or</span>
+            <div className="flex-1 h-px bg-border" />
+          </div>
 
-        {/* Direct email */}
-        <div className="text-center">
-          <p className="text-text-secondary mb-4">Prefer email?</p>
-          <a
-            href="mailto:hello@danielurbina.dev"
-            className="text-accent-cyan hover:text-text-highlight text-lg font-medium transition-colors"
-          >
-            hello@danielurbina.dev
-          </a>
-        </div>
+          {/* Direct email */}
+          <div className="text-center">
+            <p className="text-text-secondary mb-4">Prefer email?</p>
+            <a
+              href="mailto:hello@danielurbina.dev"
+              className="text-accent-cyan hover:text-text-highlight text-lg font-medium transition-colors"
+            >
+              hello@danielurbina.dev
+            </a>
+          </div>
+        </ScrollReveal>
       </div>
     </section>
   );
