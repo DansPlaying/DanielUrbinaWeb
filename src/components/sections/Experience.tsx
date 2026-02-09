@@ -1,20 +1,28 @@
+"use client";
+
+import { motion } from "framer-motion";
 import { SectionHeading } from "@/components/ui/SectionHeading";
+import { ScrollReveal } from "@/components/ui/ScrollReveal";
 import { experience } from "@/data/experience";
 
 export function Experience() {
   return (
     <section id="experience" className="py-16 md:py-20 lg:py-24">
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-        <SectionHeading
-          title="Work"
-          highlight="Experience"
-          description="My professional journey so far"
-        />
+        <ScrollReveal>
+          <SectionHeading
+            title="Work"
+            highlight="Experience"
+            description="My professional journey so far"
+          />
+        </ScrollReveal>
 
         {experience.length === 0 ? (
-          <p className="text-center text-text-secondary">
-            Experience details coming soon.
-          </p>
+          <ScrollReveal>
+            <p className="text-center text-text-secondary">
+              Experience details coming soon.
+            </p>
+          </ScrollReveal>
         ) : (
           <div className="relative">
             {/* Timeline line */}
@@ -25,12 +33,32 @@ export function Experience() {
                 const isLeft = index % 2 === 0;
 
                 return (
-                  <div
+                  <motion.div
                     key={entry.id}
                     className="relative pl-12 md:pl-0 md:grid md:grid-cols-2 md:gap-8"
+                    initial={{ opacity: 0, x: isLeft ? -30 : 30 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    viewport={{ once: true, amount: 0.2 }}
+                    transition={{
+                      duration: 0.6,
+                      delay: index * 0.15,
+                      ease: [0.16, 1, 0.3, 1],
+                    }}
                   >
                     {/* Timeline dot */}
-                    <div className="absolute left-4 md:left-1/2 w-4 h-4 bg-accent rounded-full border-4 border-background -translate-x-1/2 shadow-glow z-10" />
+                    <motion.div
+                      className="absolute left-4 md:left-1/2 w-4 h-4 bg-accent rounded-full border-4 border-background -translate-x-1/2 shadow-glow z-10"
+                      initial={{ scale: 0 }}
+                      whileInView={{ scale: 1 }}
+                      viewport={{ once: true }}
+                      transition={{
+                        duration: 0.4,
+                        delay: index * 0.15 + 0.2,
+                        type: "spring",
+                        stiffness: 300,
+                        damping: 20,
+                      }}
+                    />
 
                     {/* Card */}
                     <div
@@ -95,7 +123,7 @@ export function Experience() {
 
                     {/* Empty column for alternating layout */}
                     {isLeft && <div className="hidden md:block" />}
-                  </div>
+                  </motion.div>
                 );
               })}
             </div>
