@@ -1,0 +1,164 @@
+"use client";
+
+import { useState, useEffect } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import { Menu, X, Download } from "lucide-react";
+import { Logo } from "@/components/ui/Logo";
+import { Button } from "@/components/ui/Button";
+
+const navLinks = [
+  { label: "About", href: "#about" },
+  { label: "Skills", href: "#skills" },
+  { label: "Projects", href: "#projects" },
+  { label: "Experience", href: "#experience" },
+  { label: "Contact", href: "#contact" },
+];
+
+export function Navbar() {
+  const [isScrolled, setIsScrolled] = useState(false);
+  const [isMobileOpen, setIsMobileOpen] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => setIsScrolled(window.scrollY > 50);
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  useEffect(() => {
+    if (isMobileOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [isMobileOpen]);
+
+  useEffect(() => {
+    const handleEsc = (e: KeyboardEvent) => {
+      if (e.key === "Escape") setIsMobileOpen(false);
+    };
+    window.addEventListener("keydown", handleEsc);
+    return () => window.removeEventListener("keydown", handleEsc);
+  }, []);
+
+  return (
+    <header
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+        isScrolled
+          ? "bg-background-secondary/80 backdrop-blur-md border-b border-border shadow-md"
+          : "bg-transparent"
+      }`}
+    >
+      <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 md:h-20 flex items-center justify-between">
+        {/* Logo */}
+        <a href="#" className="flex-shrink-0" aria-label="Back to top">
+          <Logo size="sm" className="md:hidden" />
+          <Logo size="md" className="hidden md:block" />
+        </a>
+
+        {/* Desktop nav links */}
+        <div className="hidden md:flex md:items-center md:space-x-8">
+          {navLinks.map((link) => (
+            <a
+              key={link.href}
+              href={link.href}
+              className="text-sm font-medium tracking-wide text-text-secondary hover:text-text-primary transition-colors duration-200 relative after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-accent-cyan after:scale-x-0 hover:after:scale-x-100 after:transition-transform after:origin-left"
+            >
+              {link.label}
+            </a>
+          ))}
+        </div>
+
+        {/* Desktop CTA */}
+        <Button
+          variant="primary"
+          href="/Daniel-Urbina-Resume.pdf"
+          className="hidden md:inline-flex text-sm py-2 px-4"
+          download
+        >
+          <Download size={16} />
+          Download CV
+        </Button>
+
+        {/* Mobile hamburger */}
+        <button
+          className="md:hidden p-2 text-text-primary hover:bg-background-tertiary rounded-md transition-colors"
+          onClick={() => setIsMobileOpen(!isMobileOpen)}
+          aria-label={isMobileOpen ? "Close menu" : "Open menu"}
+          aria-expanded={isMobileOpen}
+        >
+          {isMobileOpen ? <X size={24} /> : <Menu size={24} />}
+        </button>
+      </nav>
+
+      {/* Mobile drawer */}
+      <AnimatePresence>
+        {isMobileOpen && (
+          <>
+            {/* Backdrop */}
+            <motion.div
+              className="fixed inset-0 bg-black/50 backdrop-blur-sm z-40"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              onClick={() => setIsMobileOpen(false)}
+            />
+
+            {/* Drawer panel */}
+            <motion.div
+              className="fixed top-0 right-0 bottom-0 w-full max-w-sm bg-background-secondary z-50 shadow-xl p-6"
+              initial={{ x: "100%" }}
+              animate={{ x: 0 }}
+              exit={{ x: "100%" }}
+              transition={{ duration: 0.3, ease: "easeOut" }}
+              role="dialog"
+              aria-modal="true"
+              aria-label="Navigation menu"
+            >
+              {/* Close button */}
+              <div className="flex justify-end mb-8">
+                <button
+                  className="p-2 text-text-primary hover:bg-background-tertiary rounded-md transition-colors"
+                  onClick={() => setIsMobileOpen(false)}
+                  aria-label="Close menu"
+                >
+                  <X size={24} />
+                </button>
+              </div>
+
+              {/* Links */}
+              <nav className="space-y-6">
+                {navLinks.map((link) => (
+                  <a
+                    key={link.href}
+                    href={link.href}
+                    className="block text-lg font-medium text-text-secondary hover:text-text-primary transition-colors"
+                    onClick={() => setIsMobileOpen(false)}
+                  >
+                    {link.label}
+                  </a>
+                ))}
+              </nav>
+
+              {/* CTA */}
+              <div className="mt-8">
+                <Button
+                  variant="primary"
+                  href="/Daniel-Urbina-Resume.pdf"
+                  className="w-full text-sm"
+                  download
+                  onClick={() => setIsMobileOpen(false)}
+                >
+                  <Download size={16} />
+                  Download CV
+                </Button>
+              </div>
+            </motion.div>
+          </>
+        )}
+      </AnimatePresence>
+    </header>
+  );
+}

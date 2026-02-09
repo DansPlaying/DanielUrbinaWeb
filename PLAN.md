@@ -265,52 +265,53 @@ interface Social {
 
 ### Phase 1 - Foundation
 - [x] Create project plan (this document)
-- [ ] Initialize Next.js 14 project with TypeScript + Tailwind
-- [ ] Set up project structure (folders, components, lib)
-- [ ] Configure Tailwind with custom theme (colors, fonts, spacing)
-- [ ] Install dependencies (Framer Motion, Lucide, Resend, Cloudflare Turnstile, etc.)
-- [ ] Create global layout (metadata, fonts via `next/font`)
-- [ ] Define TypeScript interfaces for data models (Project, Skill, Experience, Social)
+- [x] Initialize Next.js 14 project with TypeScript + Tailwind
+- [x] Set up project structure (folders, components, lib)
+- [x] Configure Tailwind with custom theme (colors, fonts, spacing)
+- [x] Install dependencies (Framer Motion, Lucide, Resend, Cloudflare Turnstile, etc.)
+- [x] Create global layout (metadata, fonts via `next/font`)
+- [x] Define TypeScript interfaces for data models (Project, Skill, Experience, Social)
 - [ ] Create Vercel project and link to git repo
 - [ ] Set up environment variables (RESEND_API_KEY, NEXT_PUBLIC_SITE_URL, TURNSTILE_SECRET_KEY)
-- [ ] Set up `next-sitemap` configuration
+- [x] Set up `next-sitemap` configuration
 - [ ] Add Vercel Analytics component to layout
-- [ ] Add `prefers-reduced-motion` global CSS rule
+- [x] Add `prefers-reduced-motion` global CSS rule
 - [ ] Set up Sentry error tracking
 
 ### Phase 2A - Placeholder Branding (1 day, unblocks Phase 3)
-- [ ] Create placeholder SVG logo ("DU" text with gradient — simple `<text>` element)
-- [ ] Set up basic favicon from placeholder
-- [ ] Define all brand tokens (colors, typography scale, spacing)
+- [x] Create placeholder SVG logo ("DU" text with gradient — simple `<text>` element)
+- [x] Set up basic favicon from placeholder
+- [x] Define all brand tokens (colors, typography scale, spacing)
 
 ### Phase 2B - Final Branding (runs in parallel with Phase 3)
-- [ ] Design the final "DU" monogram logo in SVG
-- [ ] Generate favicon set from final logo
-- [ ] Create OG image template (1200x630)
+- [x] Design the final "DU" monogram logo in SVG
+- [x] Generate favicon set from final logo
+- [x] Create OG image template (1200x630)
 - [ ] Store CV as `/public/Daniel-Urbina-Resume.pdf`
 
 ### Phase 3 - Core Sections + Content
 Build components with real content (not dummy data) to catch layout issues early.
 
 - [ ] Write all copy (about text, project descriptions, experience entries)
-- [ ] Build Navigation component (desktop + mobile with drawer behavior)
-- [ ] Build Hero section with typing animation
-- [ ] Build About section with stats
-- [ ] Build Skills grid
-- [ ] Build Projects showcase cards
-- [ ] Build Experience timeline
-- [ ] Build Contact section with form + Turnstile + honeypot + rate limiting
-- [ ] Build Footer
-- [ ] Configure contact form backend (Resend API route)
-- [ ] Add React Error Boundaries around each section
-- [ ] Swap placeholder logo for final logo (when Phase 2B completes)
+- [x] Build Navigation component (desktop + mobile with drawer behavior)
+- [x] Build Hero section with typing animation
+- [x] Build About section with stats
+- [x] Build Skills grid
+- [x] Build Projects showcase cards
+- [x] Build Experience timeline
+- [x] Build Contact section with form + Turnstile + honeypot + rate limiting
+- [x] Build Footer
+- [x] Configure contact form backend (Resend API route)
+- [x] Add React Error Boundaries around each section
+- [x] Swap placeholder logo for final logo (when Phase 2B completes)
 
 ### Phase 4A - Essential Animations
 - [ ] Add scroll-triggered fade-in animations (Framer Motion + Intersection Observer)
-- [ ] Add hover interactions on cards (lift, glow)
+- [x] Add hover interactions on cards (lift, glow) — built into Skill/Project/Experience cards
 - [ ] Add page transition animations
 - [ ] SVG logo draw-in animation
-- [ ] Smooth scroll + active nav link tracking
+- [x] Smooth scroll — enabled via `scroll-behavior: smooth` in globals.css
+- [ ] Active nav link tracking (Intersection Observer)
 - [ ] Verify all animations respect `prefers-reduced-motion`
 
 ### Phase 4B - Three.js Hero (optional, time-boxed to 2 days)
