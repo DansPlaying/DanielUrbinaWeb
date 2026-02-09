@@ -8,8 +8,8 @@ import {
 } from "@/components/ui/ScrollReveal";
 
 const stats = [
-  { value: "5+", label: "Years Experience" },
-  { value: "20+", label: "Projects Completed" },
+  { value: "3+", label: "Years Experience" },
+  { value: "10+", label: "Projects Completed" },
   { value: "15+", label: "Technologies" },
   { value: "100%", label: "Commitment" },
 ];
@@ -36,19 +36,18 @@ export function About() {
 
               <div className="space-y-4 text-base md:text-lg leading-relaxed text-text-secondary">
                 <p>
-                  I&apos;m a passionate{" "}
+                  I&apos;m a{" "}
                   <span className="text-text-primary font-medium">
                     Full-Stack Developer
                   </span>{" "}
-                  who loves building modern web applications. With a strong
-                  foundation in both frontend and backend technologies, I create
-                  seamless digital experiences that make a difference.
+                  with experience developing scalable and efficient web
+                  applications. Specialized in Laravel, Python and Angular,
+                  with additional knowledge in Vue.js and Flutter.
                 </p>
                 <p>
-                  When I&apos;m not coding, you&apos;ll find me exploring new
-                  technologies, contributing to open-source projects, and
-                  continuously learning to stay at the cutting edge of web
-                  development.
+                  Hands-on experience implementing RESTful APIs, database design,
+                  automated testing, and project deployment. Focused on code
+                  quality, best practices, and agile methodologies.
                 </p>
               </div>
             </div>
