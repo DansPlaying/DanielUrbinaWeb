@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://danielurbina.dev
+
+# Sitemaps
+Sitemap: https://danielurbina.dev/sitemap.xml
