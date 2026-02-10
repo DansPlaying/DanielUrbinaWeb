@@ -39,14 +39,16 @@ export function Projects() {
               <StaggerItem key={project.id}>
                 <div className="group relative bg-background rounded-lg overflow-hidden border border-border hover:border-accent transition-all duration-300 hover:-translate-y-2 hover:shadow-xl h-full">
                 {/* Image */}
-                <div className="relative aspect-video overflow-hidden">
-                  <Image
-                    src={project.image}
-                    alt={project.title}
-                    fill
-                    className="object-cover transition-transform duration-500 group-hover:scale-110"
-                  />
-                  <div className="absolute inset-0 bg-accent/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                <div className="relative aspect-video overflow-hidden bg-background-tertiary">
+                  <div className="absolute inset-2 rounded-md overflow-hidden shadow-lg">
+                    <Image
+                      src={project.image}
+                      alt={project.title}
+                      fill
+                      className="object-cover object-top transition-transform duration-500 group-hover:scale-105"
+                    />
+                  </div>
+                  <div className="absolute inset-0 bg-gradient-to-t from-background/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                 </div>
 
                 {/* Content */}
