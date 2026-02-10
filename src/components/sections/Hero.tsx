@@ -110,8 +110,8 @@ export function Hero() {
               <Button variant="primary" href="#projects">
                 View My Work
               </Button>
-              <Button variant="secondary" href="#contact">
-                Get in Touch
+              <Button variant="secondary" href="#skills">
+                Skills
               </Button>
             </motion.div>
 

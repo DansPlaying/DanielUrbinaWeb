@@ -3,7 +3,10 @@
     "allow": [
       "WebFetch(domain:dribbble.com)",
       "Bash(npx next build:*)",
-      "Bash(git add:*)"
+      "Bash(git add:*)",
+      "WebFetch(domain:unetnotecalculator.netlify.app)",
+      "WebFetch(domain:sancrisoft-assignment.netlify.app)",
+      "Bash(npm run build:*)"
     ]
   }
 }
