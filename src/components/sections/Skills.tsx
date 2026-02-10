@@ -1,7 +1,7 @@
 "use client";
 
 import { SectionHeading } from "@/components/ui/SectionHeading";
-import { SocialIcon } from "@/components/ui/SocialIcon";
+import { TechIcon } from "@/components/ui/TechIcon";
 import {
   ScrollReveal,
   StaggerContainer,
@@ -10,14 +10,14 @@ import {
 import { skills } from "@/data/skills";
 
 const categoryLabels: Record<string, string> = {
+  other: "Soft Skills",
   frontend: "Frontend",
   backend: "Backend",
   devops: "Tools & DevOps",
-  other: "Other",
 };
 
 export function Skills() {
-  const categories = ["frontend", "backend", "devops", "other"] as const;
+  const categories = ["other", "frontend", "backend", "devops"] as const;
   const grouped = categories
     .map((cat) => ({
       key: cat,
@@ -50,8 +50,11 @@ export function Skills() {
                 {group.items.map((skill) => (
                   <StaggerItem key={skill.name}>
                     <div className="group relative bg-background-secondary rounded-lg p-6 border border-border hover:border-accent transition-all duration-300 hover:-translate-y-2 hover:shadow-glow">
-                      <div className="w-12 h-12 mb-4 text-accent-cyan" aria-hidden="true">
-                        <SocialIcon iconName={skill.icon} size={32} />
+                      <div
+                        className="w-12 h-12 mb-4 text-accent-cyan flex items-center justify-center"
+                        aria-hidden="true"
+                      >
+                        <TechIcon name={skill.name} size={32} />
                       </div>
                       <h4 className="text-base font-semibold text-text-primary">
                         {skill.name}

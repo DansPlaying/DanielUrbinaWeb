@@ -19,14 +19,7 @@ export function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileOpen, setIsMobileOpen] = useState(false);
   const [activeSection, setActiveSection] = useState<string | null>(null);
-  const [logoAnimated, setLogoAnimated] = useState(false);
   const observerRef = useRef<IntersectionObserver | null>(null);
-
-  // Mark logo animation as complete after initial render
-  useEffect(() => {
-    const timer = setTimeout(() => setLogoAnimated(true), 2000);
-    return () => clearTimeout(timer);
-  }, []);
 
   // Scroll detection
   useEffect(() => {
@@ -94,17 +87,14 @@ export function Navbar() {
     >
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 md:h-20 flex items-center justify-between">
         {/* Logo */}
-        <motion.a
+        <a
           href="#"
           className="flex-shrink-0"
           aria-label="Back to top"
-          initial={{ opacity: 0, y: -10 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.1 }}
         >
-          <Logo size="sm" className="md:hidden" animate={!logoAnimated} />
-          <Logo size="md" className="hidden md:block" animate={!logoAnimated} />
-        </motion.a>
+          <Logo size="sm" className="md:hidden" />
+          <Logo size="md" className="hidden md:block" />
+        </a>
 
         {/* Desktop nav links */}
         <div className="hidden md:flex md:items-center md:space-x-8">
@@ -125,7 +115,8 @@ export function Navbar() {
         </div>
 
         {/* Desktop CTA */}
-        <Button
+        <div></div>
+        {/* <Button
           variant="primary"
           href="/Daniel-Urbina-Resume.pdf"
           className="hidden md:inline-flex text-sm py-2 px-4"
@@ -133,7 +124,7 @@ export function Navbar() {
         >
           <Download size={16} />
           Download CV
-        </Button>
+        </Button> */}
 
         {/* Mobile hamburger */}
         <button

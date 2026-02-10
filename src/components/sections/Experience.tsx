@@ -47,7 +47,7 @@ export function Experience() {
                   >
                     {/* Timeline dot */}
                     <motion.div
-                      className="absolute left-4 md:left-1/2 w-4 h-4 bg-accent rounded-full border-4 border-background -translate-x-1/2 shadow-glow z-10"
+                      className="absolute left-4 md:left-1/2 w-4 h-4 bg-accent rounded-full border-4 border-background shadow-glow z-10"
                       initial={{ scale: 0 }}
                       whileInView={{ scale: 1 }}
                       viewport={{ once: true }}
@@ -120,9 +120,6 @@ export function Experience() {
                         )}
                       </div>
                     </div>
-
-                    {/* Empty column for alternating layout */}
-                    {isLeft && <div className="hidden md:block" />}
                   </motion.div>
                 );
               })}
