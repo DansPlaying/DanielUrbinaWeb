@@ -16,7 +16,10 @@ const stats = [
 
 export function About() {
   return (
-    <section id="about" className="py-16 md:py-20 lg:py-24 bg-background-secondary">
+    <section
+      id="about"
+      className="py-16 md:py-20 lg:py-24 bg-background-secondary"
+    >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <ScrollReveal>
           <SectionHeading
@@ -41,20 +44,23 @@ export function About() {
                     Full-Stack Developer
                   </span>{" "}
                   with experience developing scalable and efficient web
-                  applications. Specialized in Laravel, Python and Angular,
-                  with additional knowledge in Vue.js and Flutter.
+                  applications. Worked with Laravel, Node.js, Next.js, Python
+                  and Angular, with additional knowledge in Vue.js and Flutter.
                 </p>
                 <p>
-                  Hands-on experience implementing RESTful APIs, database design,
-                  automated testing, and project deployment. Focused on code
-                  quality, best practices, and agile methodologies.
+                  Hands-on experience implementing RESTful APIs, database
+                  design, automated testing, and project deployment. Focused on
+                  code quality, best practices, and agile methodologies.
                 </p>
               </div>
             </div>
           </ScrollReveal>
 
           {/* Right: Stats */}
-          <StaggerContainer staggerDelay={0.1} className="grid grid-cols-2 gap-6">
+          <StaggerContainer
+            staggerDelay={0.1}
+            className="grid grid-cols-2 gap-6"
+          >
             {stats.map((stat) => (
               <StaggerItem key={stat.label}>
                 <div className="bg-background-tertiary rounded-lg p-6 text-center hover:-translate-y-1 transition-transform duration-300">

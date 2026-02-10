@@ -7,7 +7,7 @@ const quickLinks = [
   { label: "Skills", href: "#skills" },
   { label: "Projects", href: "#projects" },
   { label: "Experience", href: "#experience" },
-  { label: "Contact", href: "#contact" },
+  // { label: "Contact", href: "#contact" },
 ];
 
 export function Footer() {
@@ -69,9 +69,8 @@ export function Footer() {
             reserved.
           </p>
           <p className="text-text-secondary text-sm">
-            Built with{" "}
-            <span className="text-accent-cyan">Next.js</span> &amp; deployed on{" "}
-            <span className="text-accent-cyan">Vercel</span>
+            Built with <span className="text-accent-cyan">Next.js</span> &amp;
+            deployed on <span className="text-accent-cyan">Vercel</span>
           </p>
         </div>
       </div>

@@ -59,8 +59,8 @@ export function Hero() {
               animate="visible"
               transition={{ duration: 0.6, delay: 0.3 }}
             >
-              Hi, I&apos;m{" "}
-              <span className="bg-gradient-accent bg-clip-text text-transparent">
+              <span className="block">Hi, I&apos;m </span>
+              <span className="bg-gradient-accent bg-clip-text text-transparent block">
                 Daniel Urbina
               </span>
             </motion.h1>
@@ -95,8 +95,9 @@ export function Hero() {
               animate="visible"
               transition={{ duration: 0.6, delay: 0.5 }}
             >
-              Building scalable web applications with Laravel, Angular, and Vue.js.
-              Focused on clean code, RESTful APIs, and delivering great user experiences.
+              Building scalable web applications with Laravel, Angular, and
+              Vue.js. Focused on clean code, RESTful APIs, and delivering great
+              user experiences.
             </motion.p>
 
             <motion.div
@@ -137,6 +138,22 @@ export function Hero() {
                   <SocialIcon iconName={social.icon} />
                 </motion.a>
               ))}
+              {/* Email - loaded from env to avoid indexation */}
+              {process.env.NEXT_PUBLIC_CONTACT_EMAIL && (
+                <motion.a
+                  href={`mailto:${process.env.NEXT_PUBLIC_CONTACT_EMAIL}`}
+                  className="w-10 h-10 flex items-center justify-center rounded-full bg-background-tertiary text-text-secondary hover:text-accent-cyan hover:bg-accent/10 hover:scale-110 transition-all duration-200"
+                  aria-label="Email"
+                  initial={{ opacity: 0, scale: 0.5 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  transition={{
+                    duration: 0.3,
+                    delay: 0.8 + socials.length * 0.1,
+                  }}
+                >
+                  <SocialIcon iconName="Mail" />
+                </motion.a>
+              )}
             </motion.div>
           </div>
 
@@ -155,8 +172,9 @@ export function Hero() {
                   <Image
                     src="/images/profile/daniel-urbina-photo.webp"
                     alt="Daniel Urbina"
-                    width={384}
-                    height={384}
+                    width={800}
+                    height={800}
+                    quality={80}
                     className="w-full h-full object-cover object-top"
                     priority
                   />
