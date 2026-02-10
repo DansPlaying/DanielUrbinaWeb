@@ -6,26 +6,27 @@ const config: Config = {
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
+  darkMode: "class",
   theme: {
     extend: {
       colors: {
         background: {
-          DEFAULT: "#0A0A0F",
-          secondary: "#12121A",
-          tertiary: "#1A1A2E",
+          DEFAULT: "rgb(var(--background) / <alpha-value>)",
+          secondary: "rgb(var(--background-secondary) / <alpha-value>)",
+          tertiary: "rgb(var(--background-tertiary) / <alpha-value>)",
         },
         accent: {
-          DEFAULT: "#6C63FF",
-          purple: "#A855F7",
-          cyan: "#22D3EE",
+          DEFAULT: "rgb(var(--accent) / <alpha-value>)",
+          purple: "rgb(var(--accent-purple) / <alpha-value>)",
+          cyan: "rgb(var(--accent-cyan) / <alpha-value>)",
         },
         text: {
-          primary: "#F1F1F1",
-          secondary: "#8B8B9E",
-          highlight: "#A855F7",
+          primary: "rgb(var(--text-primary) / <alpha-value>)",
+          secondary: "rgb(var(--text-secondary) / <alpha-value>)",
+          highlight: "rgb(var(--text-highlight) / <alpha-value>)",
         },
         border: {
-          DEFAULT: "#1E1E2E",
+          DEFAULT: "rgb(var(--border) / <alpha-value>)",
         },
       },
       fontFamily: {

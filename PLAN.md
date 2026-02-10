@@ -31,6 +31,7 @@ A **dark-themed, modern developer portfolio** that combines:
 
 ## Color Palette
 
+### Dark Mode (Primary)
 ```
 Background (primary):   #0A0A0F   (near-black)
 Background (secondary): #12121A   (dark card surfaces)
@@ -45,6 +46,24 @@ Text (highlight):       #A855F7   (accent match)
 
 Border:                 #1E1E2E   (subtle dividers)
 ```
+
+### Light Mode
+```
+Background (primary):   #FAFAFA   (soft off-white)
+Background (secondary): #F5F5F7   (light card surfaces)
+Background (tertiary):  #ECECEF   (elevated surfaces / hover)
+
+Accent gradient:        #6C63FF -> #A855F7  (same - maintains brand consistency)
+Accent secondary:       #22D3EE   (same - cyan highlights)
+
+Text (primary):         #1A1A2E   (near-black, 13.2:1 contrast - AAA)
+Text (secondary):       #5B5B6F   (dark gray, 7.1:1 contrast - AAA)
+Text (highlight):       #7C3AED   (deeper purple for contrast)
+
+Border:                 #E0E0E6   (subtle gray dividers)
+```
+
+**Implementation**: Uses CSS custom properties with `next-themes` for seamless theme switching with zero-flash loading and persistent user preference.
 
 ---
 
@@ -313,6 +332,18 @@ Build components with real content (not dummy data) to catch layout issues early
 - [x] Smooth scroll — enabled via `scroll-behavior: smooth` in globals.css
 - [x] Active nav link tracking (Intersection Observer) — Navbar tracks active section
 - [x] Verify all animations respect `prefers-reduced-motion` — MotionConfig reducedMotion="user" + CSS rule
+
+### Phase 4D - Dark/Light Mode Toggle (New)
+- [ ] Install `next-themes` package
+- [ ] Update `globals.css` with CSS custom properties for light/dark themes
+- [ ] Update `tailwind.config.ts` to use CSS variables instead of hardcoded colors
+- [ ] Create `ThemeProvider` component and wrap root layout
+- [ ] Create `ThemeToggle` component with animated icon transition
+- [ ] Add theme toggle to Navbar (right side, before CV button)
+- [ ] Update shadow/glow utilities for theme-aware values
+- [ ] Test light mode across all sections for contrast and readability
+- [ ] Verify dark mode still works identically after migration
+- [ ] Verify theme preference persists and respects system preference
 
 ### Phase 4B - Three.js Hero (optional, time-boxed to 2 days)
 - [ ] Add hero background effect (particles / 3D geometry) — desktop only

@@ -5,6 +5,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X, Download } from "lucide-react";
 import { Logo } from "@/components/ui/Logo";
 import { Button } from "@/components/ui/Button";
+import { ThemeToggle } from "@/components/ui/ThemeToggle";
 import { cn } from "@/lib/utils";
 
 const navLinks = [
@@ -114,27 +115,32 @@ export function Navbar() {
           ))}
         </div>
 
-        {/* Desktop CTA */}
-        <div></div>
-        {/* <Button
-          variant="primary"
-          href="/Daniel-Urbina-Resume.pdf"
-          className="hidden md:inline-flex text-sm py-2 px-4"
-          download
-        >
-          <Download size={16} />
-          Download CV
-        </Button> */}
+        {/* Desktop CTA & Theme Toggle */}
+        <div className="hidden md:flex items-center gap-4">
+          <ThemeToggle />
+          {/* <Button
+            variant="primary"
+            href="/Daniel-Urbina-Resume.pdf"
+            className="text-sm py-2 px-4"
+            download
+          >
+            <Download size={16} />
+            Download CV
+          </Button> */}
+        </div>
 
-        {/* Mobile hamburger */}
-        <button
-          className="md:hidden p-2 text-text-primary hover:bg-background-tertiary rounded-md transition-colors"
-          onClick={() => setIsMobileOpen(!isMobileOpen)}
-          aria-label={isMobileOpen ? "Close menu" : "Open menu"}
-          aria-expanded={isMobileOpen}
-        >
-          {isMobileOpen ? <X size={24} /> : <Menu size={24} />}
-        </button>
+        {/* Mobile: Theme Toggle + Hamburger */}
+        <div className="flex items-center gap-3 md:hidden">
+          <ThemeToggle />
+          <button
+            className="p-2 text-text-primary hover:bg-background-tertiary rounded-md transition-colors"
+            onClick={() => setIsMobileOpen(!isMobileOpen)}
+            aria-label={isMobileOpen ? "Close menu" : "Open menu"}
+            aria-expanded={isMobileOpen}
+          >
+            {isMobileOpen ? <X size={24} /> : <Menu size={24} />}
+          </button>
+        </div>
       </nav>
 
       {/* Mobile drawer */}
