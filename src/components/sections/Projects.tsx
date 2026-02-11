@@ -2,7 +2,13 @@
 
 import { useState } from "react";
 import Image from "next/image";
-import { ExternalLink, Github, ArrowRight, ChevronDown, ChevronUp } from "lucide-react";
+import {
+  ExternalLink,
+  Github,
+  ArrowRight,
+  ChevronDown,
+  ChevronUp,
+} from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import {
@@ -17,7 +23,7 @@ function ProjectCard({ project }: { project: Project }) {
   const [isExpanded, setIsExpanded] = useState(false);
 
   return (
-    <div className="group relative bg-background rounded-lg overflow-hidden border border-border hover:border-accent transition-all duration-300 hover:-translate-y-2 hover:shadow-xl h-full flex flex-col">
+    <div className="group relative bg-background rounded-lg overflow-hidden border border-border hover:border-accent transition-all duration-300 hover:-translate-y-2 hover:shadow-xl flex flex-col h-min min-h-[550px]">
       {/* Image */}
       <div className="relative aspect-video overflow-hidden bg-background-tertiary">
         <div className="absolute inset-2 rounded-md overflow-hidden shadow-lg">
@@ -117,7 +123,10 @@ export function Projects() {
   const featured = projects.filter((p) => p.featured);
 
   return (
-    <section id="projects" className="py-16 md:py-20 lg:py-24 bg-background-secondary">
+    <section
+      id="projects"
+      className="py-16 md:py-20 lg:py-24 bg-background-secondary"
+    >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <ScrollReveal>
           <SectionHeading
