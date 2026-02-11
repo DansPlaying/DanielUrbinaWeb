@@ -1,0 +1,62 @@
+<svg width="1200" height="800" viewBox="0 0 1200 800" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="1200" height="800" fill="#0f172a"/>
+
+  <!-- Grid lines -->
+  <g stroke="#1e293b" stroke-width="1">
+    <line x1="100" y1="100" x2="100" y2="650"/>
+    <line x1="100" y1="650" x2="1100" y2="650"/>
+    <!-- Horizontal grid -->
+    <line x1="100" y1="200" x2="1100" y2="200" stroke-dasharray="4"/>
+    <line x1="100" y1="325" x2="1100" y2="325" stroke-dasharray="4"/>
+    <line x1="100" y1="450" x2="1100" y2="450" stroke-dasharray="4"/>
+    <line x1="100" y1="550" x2="1100" y2="550" stroke-dasharray="4"/>
+  </g>
+
+  <!-- Graph line 1 - CO (cyan) -->
+  <path d="M100 500 Q200 480 300 420 T500 350 T700 380 T900 300 T1100 280"
+        stroke="#22d3ee" stroke-width="3" fill="none"/>
+
+  <!-- Graph line 2 - H2 (purple) -->
+  <path d="M100 550 Q200 520 300 480 T500 450 T700 400 T900 420 T1100 380"
+        stroke="#a855f7" stroke-width="3" fill="none"/>
+
+  <!-- Graph line 3 - CH4 (green) -->
+  <path d="M100 580 Q200 560 300 550 T500 520 T700 480 T900 500 T1100 460"
+        stroke="#4ade80" stroke-width="3" fill="none"/>
+
+  <!-- Data points -->
+  <g fill="#22d3ee">
+    <circle cx="300" cy="420" r="6"/>
+    <circle cx="500" cy="350" r="6"/>
+    <circle cx="700" cy="380" r="6"/>
+    <circle cx="900" cy="300" r="6"/>
+  </g>
+
+  <!-- Alert indicator -->
+  <rect x="880" y="280" width="40" height="40" rx="8" fill="#ef4444" opacity="0.8"/>
+  <text x="900" y="308" text-anchor="middle" fill="white" font-family="monospace" font-size="20">!</text>
+
+  <!-- Legend -->
+  <g transform="translate(150, 720)">
+    <rect x="0" y="0" width="16" height="16" fill="#22d3ee" rx="2"/>
+    <text x="24" y="13" fill="#94a3b8" font-family="system-ui" font-size="14">CO</text>
+
+    <rect x="80" y="0" width="16" height="16" fill="#a855f7" rx="2"/>
+    <text x="104" y="13" fill="#94a3b8" font-family="system-ui" font-size="14">H₂</text>
+
+    <rect x="160" y="0" width="16" height="16" fill="#4ade80" rx="2"/>
+    <text x="184" y="13" fill="#94a3b8" font-family="system-ui" font-size="14">CH₄</text>
+  </g>
+
+  <!-- Title area -->
+  <text x="600" y="60" text-anchor="middle" fill="#f1f5f9" font-family="system-ui" font-size="28" font-weight="bold">Real-Time Gas Sensor Monitoring</text>
+
+  <!-- Arduino chip icon -->
+  <g transform="translate(1020, 700)">
+    <rect x="0" y="0" width="60" height="40" rx="4" fill="#1e293b" stroke="#334155" stroke-width="2"/>
+    <rect x="8" y="8" width="8" height="8" fill="#22d3ee"/>
+    <rect x="20" y="8" width="8" height="8" fill="#4ade80"/>
+    <rect x="8" y="22" width="20" height="4" fill="#475569"/>
+  </g>
+</svg>

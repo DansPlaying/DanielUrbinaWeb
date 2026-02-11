@@ -33,4 +33,20 @@ export const projects: Project[] = [
     },
     date: "2023",
   },
+  {
+    id: "trama-graph",
+    title: "Trama Graph",
+    description:
+      "Real-time gas sensor monitoring system with Arduino integration, featuring live data visualization, configurable alerts, and data persistence.",
+    longDescription:
+      "A full-stack IoT monitoring solution that visualizes real-time Arduino gas sensor readings (CO, H2, CH4, LPG, AL) with 30-second rolling window charts. Features threshold-based alarm management with visual notifications, batch data uploads to PostgreSQL, and network resilience handling. The system uses Web Serial API for direct Arduino communication and includes snapshot generation for alarm reports.",
+    image: "/images/projects/trama-graph.svg",
+    tags: ["React", "TypeScript", "Node.js", "Express", "PostgreSQL", "Prisma", "Arduino", "IoT"],
+    featured: true,
+    category: "tool",
+    links: {
+      github: "https://github.com/21harley/trama-graph",
+    },
+    date: "2024",
+  },
 ];
