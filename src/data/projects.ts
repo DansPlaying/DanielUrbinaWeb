@@ -8,7 +8,7 @@ export const projects: Project[] = [
       "Corporate website for Sancrisoft, a software development company. Built as part of the development team.",
     longDescription:
       "Contributed to building the official corporate website for Sancrisoft, a software development company specializing in custom solutions. The site showcases the company's services, team, and portfolio with a modern, professional design optimized for lead generation and brand presence.",
-    image: "/images/projects/sancrisoft-website.webp",
+    image: "/images/projects/sancrisoft-web.png",
     tags: ["Next.js", "React", "TypeScript", "Corporate"],
     featured: true,
     category: "web",
@@ -57,7 +57,16 @@ export const projects: Project[] = [
     longDescription:
       "A full-stack IoT monitoring solution that visualizes real-time Arduino gas sensor readings (CO, H2, CH4, LPG, AL) with 30-second rolling window charts. Features threshold-based alarm management with visual notifications, batch data uploads to PostgreSQL, and network resilience handling. The system uses Web Serial API for direct Arduino communication and includes snapshot generation for alarm reports.",
     image: "/images/projects/trama-graph.svg",
-    tags: ["React", "TypeScript", "Node.js", "Express", "PostgreSQL", "Prisma", "Arduino", "IoT"],
+    tags: [
+      "React",
+      "TypeScript",
+      "Node.js",
+      "Express",
+      "PostgreSQL",
+      "Prisma",
+      "Arduino",
+      "IoT",
+    ],
     featured: true,
     category: "tool",
     links: {
