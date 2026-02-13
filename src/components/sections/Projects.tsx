@@ -31,7 +31,11 @@ function ProjectCard({ project }: { project: Project }) {
             src={project.image}
             alt={project.title}
             fill
-            className="object-cover object-top transition-transform duration-500 group-hover:scale-105"
+            className={`transition-transform duration-500 group-hover:scale-105 ${
+              project.category === "mobile"
+                ? "object-contain bg-background-tertiary"
+                : "object-cover object-top"
+            }`}
           />
         </div>
         <div className="absolute inset-0 bg-gradient-to-t from-background/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
