@@ -2,6 +2,22 @@ import { Project } from "@/lib/types";
 
 export const projects: Project[] = [
   {
+    id: "sancrisoft-website",
+    title: "Sancrisoft Company Website",
+    description:
+      "Corporate website for Sancrisoft, a software development company. Built as part of the development team.",
+    longDescription:
+      "Contributed to building the official corporate website for Sancrisoft, a software development company specializing in custom solutions. The site showcases the company's services, team, and portfolio with a modern, professional design optimized for lead generation and brand presence.",
+    image: "/images/projects/sancrisoft-website.webp",
+    tags: ["Next.js", "React", "TypeScript", "Corporate"],
+    featured: true,
+    category: "web",
+    links: {
+      demo: "https://www.sancrisoft.com",
+    },
+    date: "2024",
+  },
+  {
     id: "sancrisoft-business-wizard",
     title: "Business Registration Wizard",
     description:
@@ -46,6 +62,22 @@ export const projects: Project[] = [
     category: "tool",
     links: {
       github: "https://github.com/21harley/trama-graph",
+    },
+    date: "2024",
+  },
+  {
+    id: "cycle-app",
+    title: "Cycle App",
+    description:
+      "A Flutter mobile application for tracking women's menstrual cycles with predictions and health insights.",
+    longDescription:
+      "A comprehensive menstrual cycle tracking app built with Flutter for cross-platform mobile support. Helps users track their periods, predict upcoming cycles, and monitor symptoms. Features an intuitive calendar interface, cycle history, and personalized insights to help women better understand their health patterns.",
+    image: "/images/projects/cycle-app.png",
+    tags: ["Flutter", "Dart", "Mobile", "Health"],
+    featured: true,
+    category: "mobile",
+    links: {
+      github: "https://github.com/DansPlaying/cycleApp",
     },
     date: "2024",
   },
