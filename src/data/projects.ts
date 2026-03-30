@@ -90,4 +90,21 @@ export const projects: Project[] = [
     },
     date: "2024",
   },
+  {
+    id: "ensolvers-notes-app",
+    title: "ENSOLVERS Notes App",
+    description:
+      "Full-stack notes application with authentication, tagging, and archiving. Built as a technical assessment for ENSOLVERS.",
+    longDescription:
+      "A complete notes management platform built as a technical assessment for ENSOLVERS, demonstrating full-stack proficiency with modern technologies. Features secure JWT-based authentication with 30-day session persistence, complete CRUD operations for notes, and an archive system for organizing content. Users can create custom category tags, assign multiple tags to notes, and filter their collection by category. The application implements user-isolated data storage, ensuring each user maintains their own private notes and categories. Built with a NestJS REST API backend using TypeORM for database operations, and a Next.js frontend styled with Tailwind CSS featuring dark mode support.",
+    image: "/images/projects/ensolvers-notes.png",
+    tags: ["Next.js", "NestJS", "TypeScript", "JWT", "TypeORM", "Tailwind CSS"],
+    featured: true,
+    category: "web",
+    links: {
+      demo: "https://urbina-frontend.netlify.app",
+      github: "https://github.com/DansPlaying/ensolver-assesment",
+    },
+    date: "2024",
+  },
 ];
