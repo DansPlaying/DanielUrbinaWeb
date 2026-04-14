@@ -2,6 +2,23 @@ import { Project } from "@/lib/types";
 
 export const projects: Project[] = [
   {
+    id: "portfolio-website",
+    title: "Personal Portfolio",
+    description:
+      "My personal portfolio website showcasing my work and skills. Built with Next.js, TypeScript, and Tailwind CSS.",
+    longDescription:
+      "A modern, dark-themed developer portfolio featuring smooth animations with Framer Motion, responsive design, and optimized performance. The site showcases my projects, skills, and professional experience with a clean terminal-inspired aesthetic. Built with Next.js 14 App Router, TypeScript, and Tailwind CSS for a fast, accessible, and SEO-friendly experience.",
+    image: "/images/projects/portfolio.png",
+    tags: ["Next.js", "React", "TypeScript", "Tailwind CSS", "Framer Motion"],
+    featured: true,
+    category: "web",
+    links: {
+      demo: "https://danielurbina.dev",
+      github: "https://github.com/DansPlaying/DanielUrbinaWeb",
+    },
+    date: "2025",
+  },
+  {
     id: "sancrisoft-website",
     title: "Sancrisoft Company Website",
     description:

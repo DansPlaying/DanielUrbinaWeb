@@ -18,6 +18,10 @@ export const skills: Skill[] = [
     name: "Agile",
     category: "other",
   },
+  {
+    name: "Clean Architecture",
+    category: "other",
+  },
 
   // Frontend
   {
@@ -54,7 +58,10 @@ export const skills: Skill[] = [
   },
   {
     name: "Flutter",
-
+    category: "frontend",
+  },
+  {
+    name: "Dart",
     category: "frontend",
   },
 
@@ -84,8 +91,23 @@ export const skills: Skill[] = [
     category: "backend",
   },
   {
+    name: "PostgreSQL",
+    category: "backend",
+  },
+  {
+    name: "MongoDB",
+    category: "backend",
+  },
+  {
     name: "RESTful APIs",
-
+    category: "backend",
+  },
+  {
+    name: "GraphQL",
+    category: "backend",
+  },
+  {
+    name: "Firebase",
     category: "backend",
   },
 

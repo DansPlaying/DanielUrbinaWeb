@@ -11,7 +11,7 @@ export const experience: Experience[] = [
     endDate: "Present",
     location: "Remote",
     achievements: ["Worked on Sancrisoft website", "Worked on PWRL website"],
-    technologies: ["Next.js", "TypeScript", "React", "Tailwind CSS", "Git"],
+    technologies: ["Next.js", "React", "TypeScript", "Tailwind CSS", "NestJS", "Node.js", "Git"],
   },
   {
     id: "tlux",
@@ -28,7 +28,7 @@ export const experience: Experience[] = [
       "Used Git with branching workflows and version control",
       "Coordinated with design teams to improve UX/UI",
     ],
-    technologies: ["Laravel", "Angular", "Python", "Vue.js", "Git"],
+    technologies: ["Laravel", "Angular", "Vue.js", "NestJS", "Node.js", "Python", "Git"],
   },
   {
     id: "digital-node",
@@ -47,6 +47,6 @@ export const experience: Experience[] = [
       "Collaborated with UI/UX team to improve design and functionality",
       "Contributed to database modeling and optimization",
     ],
-    technologies: ["Flutter", "TypeScript", "RESTful APIs", "Git"],
+    technologies: ["Flutter", "Dart", "Firebase", "GraphQL", "TypeScript"],
   },
 ];
