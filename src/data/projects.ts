@@ -13,7 +13,7 @@ export const projects: Project[] = [
     featured: true,
     category: "web",
     links: {
-      demo: "https://danielurbina.dev",
+      demo: "#top",
       github: "https://github.com/DansPlaying/DanielUrbinaWeb",
     },
     date: "2025",
