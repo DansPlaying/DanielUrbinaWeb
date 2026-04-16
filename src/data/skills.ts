@@ -23,6 +23,10 @@ export const skills: Skill[] = [
     category: "other",
   },
   {
+    name: "Astro",
+    category: "frontend",
+  },
+  {
     name: "WordPress",
     category: "frontend",
   },

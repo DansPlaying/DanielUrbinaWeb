@@ -110,6 +110,23 @@ export const projects: Project[] = [
     date: "2024",
   },
   {
+    id: "open-market",
+    title: "Open Market",
+    description:
+      "A modern e-commerce landing built with Astro, HTML, CSS, and Tailwind CSS. Fast, lightweight, and fully static.",
+    longDescription:
+      "Open Market is a static e-commerce front-end built with Astro for lightning-fast performance. Leveraging Astro's island architecture alongside HTML, CSS, and Tailwind CSS, the project delivers a clean shopping experience with minimal JavaScript and optimized load times.",
+    image: "/images/projects/open-market.png",
+    tags: ["Astro", "HTML", "CSS", "Tailwind CSS"],
+    featured: true,
+    category: "web",
+    links: {
+      demo: "https://open-market-astro.netlify.app",
+      github: "https://github.com/DansPlaying/OpenMarket",
+    },
+    date: "2024",
+  },
+  {
     id: "bdl-cap",
     title: "BDL Cap",
     description:
