@@ -22,6 +22,10 @@ export const skills: Skill[] = [
     name: "Clean Architecture",
     category: "other",
   },
+  {
+    name: "WordPress",
+    category: "frontend",
+  },
 
   // Frontend
   {
@@ -53,6 +57,10 @@ export const skills: Skill[] = [
     category: "frontend",
   },
   {
+    name: "CSS",
+    category: "frontend",
+  },
+  {
     name: "Tailwind CSS",
     category: "frontend",
   },
@@ -66,6 +74,10 @@ export const skills: Skill[] = [
   },
 
   // Backend
+  {
+    name: "PHP",
+    category: "backend",
+  },
   {
     name: "Laravel",
     category: "backend",
