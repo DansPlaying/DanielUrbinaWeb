@@ -47,6 +47,7 @@ export const projects: Project[] = [
     category: "web",
     links: {
       demo: "https://sancrisoft-assignment.netlify.app",
+      github: "https://github.com/DansPlaying/sancrisoft-technical-assessment",
     },
     date: "2024",
   },
@@ -63,6 +64,7 @@ export const projects: Project[] = [
     category: "tool",
     links: {
       demo: "https://unetnotecalculator.netlify.app",
+      github: "https://github.com/DansPlaying/noteCalculatorUnet",
     },
     date: "2023",
   },
