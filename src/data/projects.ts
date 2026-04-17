@@ -2,6 +2,22 @@ import { Project } from "@/lib/types";
 
 export const projects: Project[] = [
   {
+    id: "inventory-management",
+    title: "Inventory Management",
+    description:
+      "A comprehensive inventory management system with credit control features. Built with Next.js and Neon database.",
+    longDescription:
+      "A full-featured inventory management application designed to streamline stock tracking and credit control operations. Built with Next.js for a fast, modern user experience, Neon as the serverless PostgreSQL database for reliable data persistence, and styled with Tailwind CSS for a clean, responsive interface.",
+    image: "/images/projects/inventory-management.png",
+    tags: ["Next.js", "Neon", "Tailwind CSS", "HTML"],
+    featured: true,
+    category: "web",
+    links: {
+      demo: "https://inventory-management-dans.netlify.app/dashboard/creditControl",
+    },
+    date: "2025",
+  },
+  {
     id: "portfolio-website",
     title: "Personal Portfolio",
     description:
