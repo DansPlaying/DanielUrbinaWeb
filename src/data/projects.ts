@@ -14,6 +14,7 @@ export const projects: Project[] = [
     category: "web",
     links: {
       demo: "https://inventory-management-dans.netlify.app/dashboard/creditControl",
+      github: "https://github.com/DansPlaying/inventory-managment",
     },
     date: "2025",
   },
