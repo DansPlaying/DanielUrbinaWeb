@@ -127,55 +127,6 @@ export const projects: Project[] = [
     date: "2024",
   },
   {
-    id: "open-market",
-    title: "Open Market",
-    description:
-      "A modern e-commerce landing built with Astro, HTML, CSS, and Tailwind CSS. Fast, lightweight, and fully static.",
-    longDescription:
-      "Open Market is a static e-commerce front-end built with Astro for lightning-fast performance. Leveraging Astro's island architecture alongside HTML, CSS, and Tailwind CSS, the project delivers a clean shopping experience with minimal JavaScript and optimized load times.",
-    image: "/images/projects/open-market.png",
-    tags: ["Astro", "HTML", "CSS", "Tailwind CSS"],
-    featured: true,
-    category: "web",
-    links: {
-      demo: "https://open-market-astro.netlify.app",
-      github: "https://github.com/DansPlaying/OpenMarket",
-    },
-    date: "2024",
-  },
-  {
-    id: "bdl-cap",
-    title: "BDL Cap",
-    description:
-      "Web application for BDL Cap, developed at TLUX. Built with Laravel, Vue.js, HTML, and CSS.",
-    longDescription:
-      "A full-featured web application developed for BDL Cap as part of the work done at TLUX. Built with a Laravel backend powering a Vue.js frontend, delivering a responsive and dynamic user experience with clean HTML and CSS craftsmanship throughout.",
-    image: "/images/projects/bdl-cap.png",
-    tags: ["Laravel", "Vue.js", "HTML", "CSS", "PHP"],
-    featured: true,
-    category: "web",
-    links: {
-      demo: "https://bdlcap.com/",
-    },
-    date: "2024",
-  },
-  {
-    id: "vistalite",
-    title: "Vistalite",
-    description:
-      "Landing page for Vistalite, developed at TLUX. A clean, modern marketing site built with WordPress, HTML, and CSS.",
-    longDescription:
-      "A professional landing page built for Vistalite as part of the work done at TLUX. The site delivers a polished marketing experience with a modern design, crafted using WordPress as the CMS backbone alongside custom HTML and CSS to achieve pixel-perfect layouts and brand consistency.",
-    image: "/images/projects/vistalite.png",
-    tags: ["WordPress", "HTML", "CSS"],
-    featured: true,
-    category: "web",
-    links: {
-      demo: "https://vistalite.net/es/landing/",
-    },
-    date: "2024",
-  },
-  {
     id: "ensolvers-notes-app",
     title: "ENSOLVERS Notes App",
     description:
