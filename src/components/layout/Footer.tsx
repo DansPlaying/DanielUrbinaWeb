@@ -70,7 +70,7 @@ export function Footer() {
           </p>
           <p className="text-text-secondary text-sm">
             Built with <span className="text-accent-cyan">Next.js</span> &amp;
-            deployed on <span className="text-accent-cyan">Vercel</span>
+            deployed on <span className="text-accent-cyan">Netlify</span>
           </p>
         </div>
       </div>

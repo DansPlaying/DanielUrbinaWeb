@@ -2,6 +2,22 @@ import { Project } from "@/lib/types";
 
 export const projects: Project[] = [
   {
+    id: "coalitions-assessment",
+    title: "Tech.Care Patient Dashboard",
+    description:
+      "Healthcare patient management dashboard built as a frontend technical assessment. Features real-time vital signs, diagnosis history charts, and lab results.",
+    longDescription:
+      "A frontend technical assessment in which I built a fully functional healthcare management platform from a provided design and REST API. The dashboard displays a roster of patients with their demographics, and selecting a patient surfaces a rich detail view: a six-month blood pressure history chart with systolic/diastolic trend lines, a diagnostic list table showing conditions, descriptions, and statuses, vital signs cards (respiratory rate, temperature, heart rate) with above/below-average indicators, and a lab results panel covering blood tests, CT scans, and radiology reports. The interface mirrors a production-grade EMR UI with a tabbed navigation bar (Overview, Patients, Schedule, Message, Transactions) and a clean, accessible layout. Built with Next.js and deployed on Netlify. Source code is kept private per assessment confidentiality requirements.",
+    image: "/images/projects/coalitions-assessment.png",
+    tags: ["Next.js", "React", "TypeScript", "REST API", "Healthcare"],
+    featured: true,
+    category: "web",
+    links: {
+      demo: "https://assessment-daniel-urbina-fornt.netlify.app/",
+    },
+    date: "2025",
+  },
+  {
     id: "inventory-management",
     title: "Inventory Management",
     description:
