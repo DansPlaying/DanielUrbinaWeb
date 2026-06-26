@@ -6,7 +6,7 @@ import {
   SiAngular,
   SiVuedotjs,
   SiHtml5,
-  SiCss3,
+  SiCss,
   SiTailwindcss,
   SiFlutter,
   SiDart,
@@ -34,6 +34,10 @@ import {
   SiExpress,
   SiAstro,
   SiWordpress,
+  SiStrapi,
+  SiContentful,
+  SiOpenapiinitiative,
+  SiQuickbooks,
 } from "react-icons/si";
 import {
   Globe,
@@ -42,6 +46,7 @@ import {
   Lightbulb,
   RefreshCw,
   Layers,
+  Database,
 } from "lucide-react";
 
 // Tech icons from Simple Icons
@@ -53,7 +58,7 @@ const techIconMap: Record<string, IconType> = {
   React: SiReact,
   "Next.js": SiNextdotjs,
   HTML5: SiHtml5,
-  CSS: SiCss3,
+  CSS: SiCss,
   "Tailwind CSS": SiTailwindcss,
   Flutter: SiFlutter,
   Dart: SiDart,
@@ -65,17 +70,20 @@ const techIconMap: Record<string, IconType> = {
   "Node.js": SiNodedotjs,
   "Nest.js": SiNestjs,
   Python: SiPython,
-  SQL: SiPostgresql,
   PostgreSQL: SiPostgresql,
   MySQL: SiMysql,
   MongoDB: SiMongodb,
   GraphQL: SiGraphql,
   Firebase: SiFirebase,
+  Strapi: SiStrapi,
+  Contentful: SiContentful,
+  "RESTful APIs": SiOpenapiinitiative,
   Git: SiGit,
   Docker: SiDocker,
   NPM: SiNpm,
   Composer: SiComposer,
   Insomnia: SiInsomnia,
+  QuickBooks: SiQuickbooks,
   Figma: SiFigma,
   Vercel: SiVercel,
   GitHub: SiGithub,
@@ -88,7 +96,7 @@ const softSkillIcons: Record<string, typeof Globe> = {
   "Problem Solving": Lightbulb,
   Agile: RefreshCw,
   "Clean Architecture": Layers,
-  "RESTful APIs": Globe,
+  SQL: Database,
 };
 
 interface TechIconProps {

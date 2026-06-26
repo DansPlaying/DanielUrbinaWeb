@@ -150,4 +150,16 @@ export const skills: Skill[] = [
     name: "Insomnia",
     category: "devops",
   },
+  {
+    name: "Strapi",
+    category: "devops",
+  },
+  {
+    name: "Contentful",
+    category: "devops",
+  },
+  {
+    name: "QuickBooks",
+    category: "devops",
+  },
 ];

@@ -1,0 +1,142 @@
+{
+  "nav": {
+    "openSource": "Open Source",
+    "about": "About",
+    "skills": "Skills",
+    "projects": "Projects",
+    "experience": "Experience"
+  },
+  "hero": {
+    "greeting": "hello.world()",
+    "hi": "Hi, I'm",
+    "description": "Building scalable web applications with Laravel, Angular, Vue.js, Next.js, Nest.js, Strapi, Contentful, and Flutter. Focused on clean code, RESTful APIs, and delivering great user experiences.",
+    "roles": ["Full-Stack Developer", "Problem Solver", "Creative Coder"],
+    "viewMyWork": "View My Work",
+    "skills": "Skills"
+  },
+  "about": {
+    "title": "About",
+    "highlight": "Me",
+    "description": "Get to know the person behind the code",
+    "terminal": "daniel.about()",
+    "bio1": "I'm a <bold>Full-Stack Developer</bold> and <bold>Electronic Engineer</bold> graduated <cyan>Summa Cum Laude</cyan>. I build scalable, production-ready web applications using Laravel, Node.js, Next.js, Python, and Angular — with additional experience in Vue.js, Flutter, and headless CMS platforms like <medium>Strapi</medium> and <medium>Contentful</medium>.",
+    "bio2": "I care deeply about clean architecture, RESTful API design, database modeling, and shipping code that holds up under pressure. An engineering background means I bring rigor and first-principles thinking to every layer of the stack.",
+    "bio3": "Beyond the screen, I'm a <medium>gym regular</medium> — consistency in training carries over to consistency in code. I'm also a <medium>space geek</medium> at heart; nothing resets perspective quite like thinking at cosmic scale.",
+    "location": "Venezuela",
+    "available": "Available for work",
+    "stats": {
+      "years": "Years Experience",
+      "projects": "Projects Completed",
+      "technologies": "Technologies",
+      "commitment": "Commitment"
+    }
+  },
+  "skills": {
+    "title": "Skills &",
+    "highlight": "Technologies",
+    "description": "The tools and technologies I work with"
+  },
+  "openSource": {
+    "badge": "Open Source Contributor",
+    "title": "NPM",
+    "highlight": "Packages",
+    "description": "3 open source Strapi v5 plugins published to the NPM registry — solving real gaps in the Strapi ecosystem",
+    "footer": "All packages available on",
+    "npm": "NPM",
+    "github": "GitHub"
+  },
+  "projects": {
+    "title": "Featured",
+    "highlight": "Projects",
+    "description": "A selection of projects I've built",
+    "liveDemo": "Live Demo",
+    "sourceCode": "Source Code",
+    "categories": {
+      "web": "Web",
+      "tool": "Tool",
+      "mobile": "Mobile"
+    },
+    "items": {
+      "coalitions-assessment": {
+        "description": "Healthcare patient management dashboard built as a frontend technical assessment. Features real-time vital signs, diagnosis history charts, and lab results."
+      },
+      "inventory-management": {
+        "description": "A comprehensive inventory management system with credit control features. Built with Next.js and Neon database."
+      },
+      "portfolio-website": {
+        "description": "My personal portfolio website showcasing my work and skills. Built with Next.js, TypeScript, and Tailwind CSS."
+      },
+      "sancrisoft-website": {
+        "description": "Corporate website for Sancrisoft, a software development company. Built as part of the development team."
+      },
+      "sancrisoft-business-wizard": {
+        "description": "Multi-step business registration form built as a technical assessment for Sancrisoft. Features a clean wizard interface with form validation and progress tracking."
+      },
+      "unet-grade-calculator": {
+        "description": "Academic grade calculator designed for UNET students to convert and project their grades throughout the semester."
+      },
+      "trama-graph": {
+        "description": "Real-time gas sensor monitoring system with Arduino integration, featuring live data visualization, configurable alerts, and data persistence."
+      },
+      "cycle-app": {
+        "description": "A Flutter mobile application for tracking women's menstrual cycles with predictions and health insights."
+      },
+      "ensolvers-notes-app": {
+        "description": "Full-stack notes application with authentication, tagging, and archiving. Built as a technical assessment for ENSOLVERS."
+      }
+    }
+  },
+  "experience": {
+    "title": "Work",
+    "highlight": "Experience",
+    "description": "My professional journey so far",
+    "present": "Present",
+    "location": "Remote",
+    "entries": {
+      "sancrisoft": {
+        "role": "Full-Stack Developer",
+        "description": "Full-time remote position building production web applications with Next.js and NestJS in an agile team environment.",
+        "achievements": [
+          "Developed the Sancrisoft corporate website using Next.js App Router with SSR, reaching 95+ Lighthouse performance scores",
+          "Contributed to the PWRL platform applying WCAG 2.1 AA accessibility standards — keyboard navigation, ARIA labels, and sufficient color contrast",
+          "Optimized image delivery with next/image and lazy loading, reducing initial page load time significantly",
+          "Architected NestJS REST APIs with modular structure and JWT authentication for secure, scalable data access",
+          "Enforced TypeScript strict mode across the codebase, eliminating runtime type errors before they reached production"
+        ]
+      },
+      "tlux": {
+        "role": "Full-Stack Developer",
+        "description": "Development of web systems using Laravel, Angular, Python, and Vue.js. Implementation of RESTful APIs for internal and external integrations.",
+        "achievements": [
+          "Offloaded heavy processing to Laravel Queues and Jobs, reducing API response times and preventing request timeouts under load",
+          "Applied eager loading and indexed queries to eliminate N+1 database problems, improving data-fetch performance",
+          "Improved Angular front-end rendering using OnPush change detection and lazy-loaded route modules, reducing unnecessary re-renders",
+          "Designed versioned RESTful APIs with standardized error handling, consumed by both web and mobile clients",
+          "Integrated third-party services via API, automating workflows that previously required manual intervention",
+          "Enforced Git branching strategy (feature branches, pull requests, code reviews) across the development team",
+          "Integrated QuickBooks API to synchronize financial data between the platform and accounting workflows, reducing manual reconciliation"
+        ]
+      },
+      "digital-node": {
+        "role": "Front-End Developer",
+        "description": "Contributed to the development and refactoring of a fintech application serving thousands of users. Built customer-facing apps for banks and mobile recharge platforms.",
+        "achievements": [
+          "Refactored legacy Vue.js codebase, reducing bundle size and improving Time to Interactive by ~35%",
+          "Contributed to a fintech app serving thousands of active users, ensuring high reliability, data consistency, and zero downtime deployments",
+          "Built a customer-facing banking app with full accessibility compliance — screen reader support, keyboard navigation, and WCAG-compliant contrast",
+          "Developed a mobile recharge platform with real-time status updates and a comprehensive admin panel for transaction management",
+          "Optimized Flutter app rendering by minimizing widget rebuilds with const constructors and efficient state management",
+          "Designed and optimized database schemas, improving query efficiency for reporting features and reducing load on critical endpoints"
+        ]
+      }
+    }
+  },
+  "footer": {
+    "tagline": "Building digital experiences with code and creativity.",
+    "quickLinks": "Quick Links",
+    "connect": "Connect",
+    "copyright": "© {year} Daniel Urbina. All rights reserved.",
+    "builtWith": "Built with",
+    "deployedOn": "& deployed on"
+  }
+}

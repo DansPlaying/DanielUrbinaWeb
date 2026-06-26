@@ -22,4 +22,9 @@ export const socials: Social[] = [
     url: process.env.NEXT_PUBLIC_INSTAGRAM_URL || "",
     icon: "Instagram",
   },
+  {
+    name: "NPM",
+    url: process.env.NEXT_PUBLIC_NPM_URL || "",
+    icon: "Package",
+  },
 ].filter((social) => social.url); // Only include socials with URLs configured

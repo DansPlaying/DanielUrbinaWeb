@@ -1,19 +1,33 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { useRef } from "react";
+import { motion, useScroll, useSpring } from "framer-motion";
+import { useTranslations } from "next-intl";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { ScrollReveal } from "@/components/ui/ScrollReveal";
 import { experience } from "@/data/experience";
 
 export function Experience() {
+  const t = useTranslations("experience");
+  const timelineRef = useRef<HTMLDivElement>(null);
+  const { scrollYProgress } = useScroll({
+    target: timelineRef,
+    offset: ["start 80%", "end 20%"],
+  });
+  const scaleY = useSpring(scrollYProgress, {
+    stiffness: 80,
+    damping: 25,
+    restDelta: 0.001,
+  });
+
   return (
     <section id="experience" className="py-16 md:py-20 lg:py-24">
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         <ScrollReveal>
           <SectionHeading
-            title="Work"
-            highlight="Experience"
-            description="My professional journey so far"
+            title={t("title")}
+            highlight={t("highlight")}
+            description={t("description")}
           />
         </ScrollReveal>
 
@@ -24,13 +38,28 @@ export function Experience() {
             </p>
           </ScrollReveal>
         ) : (
-          <div className="relative">
-            {/* Timeline line */}
-            <div className="absolute left-4 md:left-1/2 top-0 bottom-0 w-0.5 bg-border -translate-x-1/2" />
+          <div className="relative" ref={timelineRef}>
+            {/* Timeline line — grey track + scroll-driven fill */}
+            <div className="absolute left-4 md:left-1/2 top-0 bottom-0 w-0.5 -translate-x-1/2">
+              <div className="absolute inset-0 bg-border rounded-full" />
+              <motion.div
+                className="absolute top-0 left-0 right-0 bottom-0 rounded-full origin-top"
+                style={{
+                  scaleY,
+                  background:
+                    "linear-gradient(to bottom, #a855f7, #22d3ee)",
+                }}
+              />
+            </div>
 
             <div className="space-y-12">
               {experience.map((entry, index) => {
                 const isLeft = index % 2 === 0;
+                const entryKey = `entries.${entry.id}` as const;
+                const role = t(`${entryKey}.role`);
+                const description = t(`${entryKey}.description`);
+                const achievements = t.raw(`${entryKey}.achievements`) as string[];
+                const location = entry.location ? t("location") : null;
 
                 return (
                   <motion.div
@@ -71,28 +100,28 @@ export function Experience() {
                       <div className="bg-background-secondary rounded-lg p-6 border border-border hover:border-accent transition-colors duration-200">
                         <div className="flex items-center justify-between mb-2 flex-wrap gap-2">
                           <h3 className="text-lg font-semibold text-text-primary">
-                            {entry.role}
+                            {role}
                           </h3>
                           <span className="text-xs font-mono text-accent-cyan whitespace-nowrap">
                             {entry.startDate} —{" "}
                             {entry.endDate === "present"
-                              ? "Present"
+                              ? t("present")
                               : entry.endDate}
                           </span>
                         </div>
 
                         <p className="text-sm text-text-secondary mb-2">
                           {entry.company}
-                          {entry.location && ` · ${entry.location}`}
+                          {location && ` · ${location}`}
                         </p>
 
                         <p className="text-sm text-text-secondary leading-relaxed">
-                          {entry.description}
+                          {description}
                         </p>
 
-                        {entry.achievements.length > 0 && (
+                        {achievements.length > 0 && (
                           <ul className="mt-4 space-y-2">
-                            {entry.achievements.map((achievement, i) => (
+                            {achievements.map((achievement, i) => (
                               <li
                                 key={i}
                                 className="text-sm text-text-secondary flex items-start gap-2"

@@ -1,0 +1,146 @@
+{
+  "nav": {
+    "openSource": "Código Abierto",
+    "about": "Sobre mí",
+    "skills": "Habilidades",
+    "projects": "Proyectos",
+    "experience": "Experiencia"
+  },
+  "hero": {
+    "greeting": "hola.mundo()",
+    "hi": "Hola, soy",
+    "description": "Desarrollo aplicaciones web escalables con Laravel, Angular, Vue.js, Next.js, Nest.js, Strapi, Contentful y Flutter. Enfocado en código limpio, APIs RESTful y experiencias de usuario excepcionales.",
+    "roles": [
+      "Desarrollador Full-Stack",
+      "Solucionador de Problemas",
+      "Programador Creativo"
+    ],
+    "viewMyWork": "Ver mi trabajo",
+    "skills": "Habilidades"
+  },
+  "about": {
+    "title": "Sobre",
+    "highlight": "mí",
+    "description": "Conoce a la persona detrás del código",
+    "terminal": "daniel.sobre()",
+    "bio1": "Soy <bold>Desarrollador Full-Stack</bold> e <bold>Ingeniero Electrónico</bold> graduado <cyan>Summa Cum Laude</cyan>. Construyo aplicaciones web escalables y listas para producción con Laravel, Node.js, Next.js, Python y Angular — con experiencia adicional en Vue.js, Flutter y plataformas CMS headless como <medium>Strapi</medium> y <medium>Contentful</medium>.",
+    "bio2": "Me importa profundamente la arquitectura limpia, el diseño de APIs RESTful, el modelado de bases de datos y entregar código que resista la presión. Mi formación en ingeniería me permite aportar rigor y pensamiento desde primeros principios en cada capa del stack.",
+    "bio3": "Más allá de la pantalla, soy un <medium>asiduo del gimnasio</medium> — la constancia en el entrenamiento se traduce en constancia en el código. También soy un <medium>apasionado del espacio</medium>; nada restablece la perspectiva como pensar a escala cósmica.",
+    "location": "Venezuela",
+    "available": "Disponible para trabajar",
+    "stats": {
+      "years": "Años de Experiencia",
+      "projects": "Proyectos Completados",
+      "technologies": "Tecnologías",
+      "commitment": "Compromiso"
+    }
+  },
+  "skills": {
+    "title": "Habilidades &",
+    "highlight": "Tecnologías",
+    "description": "Las herramientas y tecnologías con las que trabajo"
+  },
+  "openSource": {
+    "badge": "Contribuidor Open Source",
+    "title": "Paquetes",
+    "highlight": "NPM",
+    "description": "3 plugins open source de Strapi v5 publicados en el registro NPM — solucionando brechas reales en el ecosistema de Strapi",
+    "footer": "Todos los paquetes disponibles en",
+    "npm": "NPM",
+    "github": "GitHub"
+  },
+  "projects": {
+    "title": "Proyectos",
+    "highlight": "Destacados",
+    "description": "Una selección de proyectos que he construido",
+    "liveDemo": "Demo en Vivo",
+    "sourceCode": "Código Fuente",
+    "categories": {
+      "web": "Web",
+      "tool": "Herramienta",
+      "mobile": "Móvil"
+    },
+    "items": {
+      "coalitions-assessment": {
+        "description": "Panel de gestión de pacientes construido como evaluación técnica de frontend. Muestra signos vitales en tiempo real, gráficas de historial de diagnósticos y resultados de laboratorio."
+      },
+      "inventory-management": {
+        "description": "Sistema completo de gestión de inventario con control de crédito. Construido con Next.js y base de datos Neon."
+      },
+      "portfolio-website": {
+        "description": "Mi sitio web de portafolio personal que muestra mi trabajo y habilidades. Construido con Next.js, TypeScript y Tailwind CSS."
+      },
+      "sancrisoft-website": {
+        "description": "Sitio web corporativo de Sancrisoft, una empresa de desarrollo de software. Construido como parte del equipo de desarrollo."
+      },
+      "sancrisoft-business-wizard": {
+        "description": "Formulario de registro empresarial de múltiples pasos, construido como evaluación técnica para Sancrisoft. Presenta una interfaz de asistente limpia con validación de formularios y seguimiento del progreso."
+      },
+      "unet-grade-calculator": {
+        "description": "Calculadora de notas académicas diseñada para estudiantes de la UNET para convertir y proyectar sus calificaciones durante el semestre."
+      },
+      "trama-graph": {
+        "description": "Sistema de monitoreo de sensores de gas en tiempo real con integración de Arduino, visualización de datos en vivo, alertas configurables y persistencia de datos."
+      },
+      "cycle-app": {
+        "description": "Aplicación móvil Flutter para rastrear ciclos menstruales con predicciones e información de salud."
+      },
+      "ensolvers-notes-app": {
+        "description": "Aplicación de notas full-stack con autenticación, etiquetado y archivado. Construida como evaluación técnica para ENSOLVERS."
+      }
+    }
+  },
+  "experience": {
+    "title": "Experiencia",
+    "highlight": "Laboral",
+    "description": "Mi trayectoria profesional hasta ahora",
+    "present": "Presente",
+    "location": "Remoto",
+    "entries": {
+      "sancrisoft": {
+        "role": "Desarrollador Full-Stack",
+        "description": "Posición remota a tiempo completo construyendo aplicaciones web en producción con Next.js y NestJS en un entorno ágil.",
+        "achievements": [
+          "Contribuí al desarrollo del sitio corporativo de Sancrisoft con Next.js App Router y SSR, alcanzando puntuaciones Lighthouse superiores a 95",
+          "Contribuí al desarrollo de la plataforma PWRL aplicando estándares de accesibilidad WCAG 2.1 AA — navegación por teclado, etiquetas ARIA y contraste de color adecuado",
+          "Optimicé la entrega de imágenes con next/image y lazy loading, reduciendo significativamente el tiempo de carga inicial",
+          "Diseñé APIs REST con NestJS en arquitectura modular con autenticación JWT para acceso seguro y escalable a los datos",
+          "Apliqué TypeScript en modo estricto en todo el código base, eliminando errores de tipo en tiempo de ejecución antes de llegar a producción"
+        ]
+      },
+      "tlux": {
+        "role": "Desarrollador Full-Stack",
+        "description": "Desarrollo de sistemas web con Laravel, Angular, Python y Vue.js. Implementación de APIs RESTful para integraciones internas y externas.",
+        "achievements": [
+          "Delegué procesamiento pesado a Laravel Queues y Jobs, reduciendo tiempos de respuesta de la API y evitando timeouts bajo carga",
+          "Apliqué eager loading y consultas indexadas para eliminar problemas N+1, mejorando el rendimiento de acceso a datos",
+          "Mejoré el renderizado en Angular usando OnPush change detection y módulos de ruta con lazy loading, reduciendo re-renders innecesarios",
+          "Diseñé APIs RESTful versionadas con manejo estandarizado de errores, consumidas por clientes web y móviles",
+          "Integré servicios de terceros vía API, automatizando flujos de trabajo que antes requerían intervención manual",
+          "Establecí estrategia de ramas Git (feature branches, pull requests, revisiones de código) en el equipo de desarrollo",
+          "Integré la API de QuickBooks para sincronizar datos financieros entre la plataforma y los flujos contables, reduciendo la conciliación manual"
+        ]
+      },
+      "digital-node": {
+        "role": "Desarrollador Front-End",
+        "description": "Contribuí al desarrollo y refactorización de una aplicación fintech que sirve a miles de usuarios. Desarrollé apps para bancos y plataformas de recarga móvil.",
+        "achievements": [
+          "Refactoricé el código base legado en Vue.js, reduciendo el tamaño del bundle y mejorando el Time to Interactive en ~35%",
+          "Contribuí a una app fintech con miles de usuarios activos, garantizando alta disponibilidad, consistencia de datos y despliegues sin tiempo de inactividad",
+          "Construí una app bancaria con accesibilidad completa — soporte para lectores de pantalla, navegación por teclado y contraste WCAG",
+          "Desarrollé una plataforma de recarga móvil con actualizaciones en tiempo real y panel de administración para gestión de transacciones",
+          "Optimicé el renderizado en Flutter minimizando reconstrucciones de widgets con constructores const y manejo eficiente del estado",
+          "Diseñé y optimicé esquemas de base de datos, mejorando la eficiencia de consultas en reportes y reduciendo la carga en endpoints críticos"
+        ]
+      }
+    }
+  },
+  "footer": {
+    "tagline": "Construyendo experiencias digitales con código y creatividad.",
+    "quickLinks": "Enlaces rápidos",
+    "connect": "Conectar",
+    "copyright": "© {year} Daniel Urbina. Todos los derechos reservados.",
+    "builtWith": "Construido con",
+    "deployedOn": "& desplegado en"
+  }
+}

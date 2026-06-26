@@ -33,7 +33,9 @@
 
   body {
     @apply bg-background text-text-primary font-sans antialiased;
-    transition: background-color 0.3s ease, color 0.3s ease;
+    transition:
+      background-color 0.3s ease,
+      color 0.3s ease;
   }
 
   /* Smooth scrolling */
@@ -62,6 +64,46 @@
   animation: float 3s ease-in-out infinite;
 }
 
+/* Meteor shooting-star keyframe
+   The span moves 45° (down-right) while the inner streak is rotated 45°,
+   so the head always leads and the gradient tail trails behind. */
+@keyframes meteor-fall {
+  0% {
+    transform: translate(0, 0);
+    opacity: 0;
+  }
+  6% {
+    opacity: 1;
+  }
+  88% {
+    opacity: 1;
+  }
+  100% {
+    transform: translate(500px, 500px);
+    opacity: 0;
+  }
+}
+
+/* Theme switch — circular wipe from toggle button position */
+::view-transition-old(root) {
+  animation: none;
+  z-index: 1;
+}
+
+::view-transition-new(root) {
+  animation: theme-wipe 1.5s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+  z-index: 9999;
+}
+
+@keyframes theme-wipe {
+  from {
+    clip-path: circle(0% at var(--theme-x, 50%) var(--theme-y, 50%));
+  }
+  to {
+    clip-path: circle(150% at var(--theme-x, 50%) var(--theme-y, 50%));
+  }
+}
+
 /* Respect reduced motion preference */
 @media (prefers-reduced-motion: reduce) {
   *,
@@ -71,5 +113,10 @@
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
+  }
+
+  ::view-transition-old(root),
+  ::view-transition-new(root) {
+    animation: none !important;
   }
 }
