@@ -20,9 +20,25 @@ export function ThemeToggle() {
 
   const isDark = theme === "dark";
 
+  const handleToggle = (e: React.MouseEvent<HTMLButtonElement>) => {
+    const rect = e.currentTarget.getBoundingClientRect();
+    document.documentElement.style.setProperty("--theme-x", `${rect.left + rect.width / 2}px`);
+    document.documentElement.style.setProperty("--theme-y", `${rect.top + rect.height / 2}px`);
+
+    const next = isDark ? "light" : "dark";
+
+    if (!("startViewTransition" in document)) {
+      setTheme(next);
+      return;
+    }
+
+    (document as Document & { startViewTransition: (cb: () => void) => void })
+      .startViewTransition(() => setTheme(next));
+  };
+
   return (
     <button
-      onClick={() => setTheme(isDark ? "light" : "dark")}
+      onClick={handleToggle}
       className="relative w-16 h-8 rounded-full transition-all duration-500 focus:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-background overflow-hidden"
       aria-label={isDark ? "Switch to light mode" : "Switch to dark mode"}
     >

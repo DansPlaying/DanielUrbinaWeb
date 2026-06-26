@@ -74,6 +74,22 @@
 }
 
 
+/* Theme switch — circular wipe from toggle button position */
+::view-transition-old(root) {
+  animation: none;
+  z-index: 1;
+}
+
+::view-transition-new(root) {
+  animation: theme-wipe 0.55s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+  z-index: 9999;
+}
+
+@keyframes theme-wipe {
+  from { clip-path: circle(0% at var(--theme-x, 50%) var(--theme-y, 50%)); }
+  to   { clip-path: circle(150% at var(--theme-x, 50%) var(--theme-y, 50%)); }
+}
+
 /* Respect reduced motion preference */
 @media (prefers-reduced-motion: reduce) {
   *,
@@ -83,5 +99,10 @@
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
+  }
+
+  ::view-transition-old(root),
+  ::view-transition-new(root) {
+    animation: none !important;
   }
 }
