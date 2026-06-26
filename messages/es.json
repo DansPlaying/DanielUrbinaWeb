@@ -98,7 +98,7 @@
         "description": "Posición remota a tiempo completo construyendo aplicaciones web en producción con Next.js y NestJS en un entorno ágil.",
         "achievements": [
           "Desarrollé el sitio corporativo de Sancrisoft con Next.js App Router y SSR, alcanzando puntuaciones Lighthouse superiores a 95",
-          "Construí la plataforma PWRL aplicando estándares de accesibilidad WCAG 2.1 AA — navegación por teclado, etiquetas ARIA y contraste de color adecuado",
+          "Contribuí al desarrollo de la plataforma PWRL aplicando estándares de accesibilidad WCAG 2.1 AA — navegación por teclado, etiquetas ARIA y contraste de color adecuado",
           "Optimicé la entrega de imágenes con next/image y lazy loading, reduciendo significativamente el tiempo de carga inicial",
           "Diseñé APIs REST con NestJS en arquitectura modular con autenticación JWT para acceso seguro y escalable a los datos",
           "Apliqué TypeScript en modo estricto en todo el código base, eliminando errores de tipo en tiempo de ejecución antes de llegar a producción"
