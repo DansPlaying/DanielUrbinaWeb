@@ -244,7 +244,7 @@ export function OpenSource() {
         </ScrollReveal>
 
         {/* Mobile: simple stacked cards */}
-        <div className="lg:hidden mt-10 grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div className="lg:hidden mt-4 grid grid-cols-1 md:grid-cols-3 gap-6">
           {packages.map((pkg) => (
             <PackageCard key={pkg.name} pkg={pkg} isFront={false} />
           ))}
@@ -339,7 +339,7 @@ export function OpenSource() {
 
         {/* Footer */}
         <ScrollReveal delay={0.3}>
-          <p className="text-center text-text-secondary text-xs mt-8 pb-4 font-mono pt-10">
+          <p className="text-center text-text-secondary text-xs mt-8 pb-4 font-mono pt-4">
             <span className="text-accent-purple">&gt;</span> {t("footer")}{" "}
             <a
               href="https://www.npmjs.com/~dans007"
