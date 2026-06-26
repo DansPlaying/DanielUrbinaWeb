@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import { TypeAnimation } from "react-type-animation";
 import { Button } from "@/components/ui/Button";
 import { SocialIcon } from "@/components/ui/SocialIcon";
+import { WaveCanvas } from "@/components/ui/WaveCanvas";
 import { socials } from "@/data/socials";
 
 // Animation variants for page load sequence
@@ -26,7 +27,7 @@ const scaleIn = {
 export function Hero() {
   return (
     <section className="relative min-h-screen flex items-center justify-center py-24 lg:py-32 overflow-hidden">
-      {/* CSS gradient background */}
+      {/* Background: gradient blobs + halftone wave */}
       <motion.div
         className="absolute inset-0 -z-10"
         initial={{ opacity: 0 }}
@@ -36,6 +37,7 @@ export function Hero() {
         <div className="absolute inset-0 bg-background" />
         <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-accent/10 rounded-full blur-3xl" />
         <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-accent-purple/10 rounded-full blur-3xl" />
+        <WaveCanvas className="absolute inset-0 opacity-[0.13]" />
       </motion.div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
