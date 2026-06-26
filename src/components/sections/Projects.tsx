@@ -4,6 +4,7 @@ import { useState, useCallback, useEffect } from "react";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import { ExternalLink, Github, ChevronLeft, ChevronRight } from "lucide-react";
+import { useTheme } from "next-themes";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { ScrollReveal } from "@/components/ui/ScrollReveal";
 import { CybercoreGrid } from "@/components/ui/CybercoreGrid";
@@ -78,7 +79,7 @@ function FanCard({
         className={`w-full h-full rounded-2xl overflow-hidden border transition-all duration-300 ${
           isActive
             ? "border-accent/60 shadow-[0_0_48px_rgba(108,99,255,0.6),0_0_96px_rgba(108,99,255,0.18)]"
-            : "border-white/10"
+            : "border-border"
         }`}
       >
         <div className="relative w-full h-full bg-background-tertiary">
@@ -103,6 +104,11 @@ function FanCard({
 }
 
 export function Projects() {
+  const { theme } = useTheme();
+  const [mounted, setMounted] = useState(false);
+  useEffect(() => setMounted(true), []);
+  const isLight = mounted && theme === "light";
+
   const [activeIndex, setActiveIndex] = useState(0);
   const featured = projects.filter((p) => p.featured);
   const total = featured.length;
@@ -131,7 +137,7 @@ export function Projects() {
     >
       {/* ── Cybercore grid header ── */}
       <div className="relative h-56 md:h-72">
-        <CybercoreGrid className="absolute inset-0 w-full h-full" />
+        <CybercoreGrid lightMode={isLight} className="absolute inset-0 w-full h-full" />
         <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-background-secondary pointer-events-none" />
         <div className="relative z-10 h-full flex flex-col items-center justify-center pt-8">
           <ScrollReveal>

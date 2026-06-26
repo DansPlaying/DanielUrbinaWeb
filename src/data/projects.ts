@@ -15,7 +15,7 @@ export const projects: Project[] = [
     links: {
       demo: "https://assessment-daniel-urbina-fornt.netlify.app/",
     },
-    date: "2025",
+    date: "2026",
   },
   {
     id: "inventory-management",
@@ -32,7 +32,7 @@ export const projects: Project[] = [
       demo: "https://inventory-management-dans.netlify.app/dashboard/creditControl",
       github: "https://github.com/DansPlaying/inventory-managment",
     },
-    date: "2025",
+    date: "2023",
   },
   {
     id: "portfolio-website",
@@ -49,7 +49,7 @@ export const projects: Project[] = [
       demo: "#top",
       github: "https://github.com/DansPlaying/DanielUrbinaWeb",
     },
-    date: "2025",
+    date: "2026",
   },
   {
     id: "sancrisoft-website",
@@ -65,7 +65,7 @@ export const projects: Project[] = [
     links: {
       demo: "https://www.sancrisoft.com",
     },
-    date: "2024",
+    date: "2025",
   },
   {
     id: "sancrisoft-business-wizard",
@@ -82,7 +82,7 @@ export const projects: Project[] = [
       demo: "https://sancrisoft-assignment.netlify.app",
       github: "https://github.com/DansPlaying/sancrisoft-technical-assessment",
     },
-    date: "2024",
+    date: "2025",
   },
   {
     id: "unet-grade-calculator",
@@ -99,7 +99,7 @@ export const projects: Project[] = [
       demo: "https://unetnotecalculator.netlify.app",
       github: "https://github.com/DansPlaying/noteCalculatorUnet",
     },
-    date: "2023",
+    date: "2025",
   },
   {
     id: "trama-graph",
@@ -124,7 +124,7 @@ export const projects: Project[] = [
     links: {
       github: "https://github.com/21harley/trama-graph",
     },
-    date: "2024",
+    date: "2025",
   },
   {
     id: "cycle-app",
@@ -157,6 +157,6 @@ export const projects: Project[] = [
       demo: "https://urbina-frontend.netlify.app",
       github: "https://github.com/DansPlaying/ensolver-assesment",
     },
-    date: "2024",
+    date: "2026",
   },
 ];

@@ -34,6 +34,9 @@ import {
   SiExpress,
   SiAstro,
   SiWordpress,
+  SiStrapi,
+  SiContentful,
+  SiOpenapiinitiative,
 } from "react-icons/si";
 import {
   Globe,
@@ -42,6 +45,7 @@ import {
   Lightbulb,
   RefreshCw,
   Layers,
+  Database,
 } from "lucide-react";
 
 // Tech icons from Simple Icons
@@ -65,12 +69,14 @@ const techIconMap: Record<string, IconType> = {
   "Node.js": SiNodedotjs,
   "Nest.js": SiNestjs,
   Python: SiPython,
-  SQL: SiPostgresql,
   PostgreSQL: SiPostgresql,
   MySQL: SiMysql,
   MongoDB: SiMongodb,
   GraphQL: SiGraphql,
   Firebase: SiFirebase,
+  Strapi: SiStrapi,
+  Contentful: SiContentful,
+  "RESTful APIs": SiOpenapiinitiative,
   Git: SiGit,
   Docker: SiDocker,
   NPM: SiNpm,
@@ -88,7 +94,7 @@ const softSkillIcons: Record<string, typeof Globe> = {
   "Problem Solving": Lightbulb,
   Agile: RefreshCw,
   "Clean Architecture": Layers,
-  "RESTful APIs": Globe,
+  SQL: Database,
 };
 
 interface TechIconProps {

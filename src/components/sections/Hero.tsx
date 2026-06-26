@@ -97,9 +97,9 @@ export function Hero() {
               animate="visible"
               transition={{ duration: 0.6, delay: 0.5 }}
             >
-              Building scalable web applications with Laravel, Angular, and
-              Vue.js. Focused on clean code, RESTful APIs, and delivering great
-              user experiences.
+              Building scalable web applications with Laravel, Angular, Vue.js,
+              Next.js, Nest.js, Strapi, Contentful, and Flutter. Focused on
+              clean code, RESTful APIs, and delivering great user experiences.
             </motion.p>
 
             <motion.div

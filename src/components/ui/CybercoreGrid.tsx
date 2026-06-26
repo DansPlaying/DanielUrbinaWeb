@@ -2,8 +2,17 @@
 
 import { useEffect, useRef } from "react";
 
-export function CybercoreGrid({ className = "" }: { className?: string }) {
+export function CybercoreGrid({
+  className = "",
+  lightMode = false,
+}: {
+  className?: string;
+  lightMode?: boolean;
+}) {
   const canvasRef = useRef<HTMLCanvasElement>(null);
+  const lightRef  = useRef(lightMode);
+
+  useEffect(() => { lightRef.current = lightMode; }, [lightMode]);
 
   useEffect(() => {
     const canvas = canvasRef.current;
@@ -24,32 +33,46 @@ export function CybercoreGrid({ className = "" }: { className?: string }) {
     const draw = () => {
       const W = canvas.offsetWidth;
       const H = canvas.offsetHeight;
+      const light = lightRef.current;
 
       ctx.clearRect(0, 0, W, H);
 
-      // Dark background base
-      ctx.fillStyle = "#0a0a0f";
+      // Background base
+      ctx.fillStyle = light ? "#f5f5f7" : "#0a0a0f";
       ctx.fillRect(0, 0, W, H);
 
       // Horizon radial glow
       const horizGlow = ctx.createRadialGradient(W / 2, H * 0.55, 0, W / 2, H * 0.55, W * 0.55);
-      horizGlow.addColorStop(0, "rgba(34,211,238,0.14)");
-      horizGlow.addColorStop(0.5, "rgba(108,99,255,0.05)");
-      horizGlow.addColorStop(1, "rgba(0,0,0,0)");
+      if (light) {
+        horizGlow.addColorStop(0, "rgba(108,99,255,0.18)");
+        horizGlow.addColorStop(0.5, "rgba(168,85,247,0.08)");
+        horizGlow.addColorStop(1, "rgba(245,245,247,0)");
+      } else {
+        horizGlow.addColorStop(0, "rgba(34,211,238,0.14)");
+        horizGlow.addColorStop(0.5, "rgba(108,99,255,0.05)");
+        horizGlow.addColorStop(1, "rgba(0,0,0,0)");
+      }
       ctx.fillStyle = horizGlow;
       ctx.fillRect(0, 0, W, H);
 
       const VPX = W / 2;
       const VPY = H * 0.48; // vanishing point (horizon)
 
+      // Grid line color: cyan on dark, indigo on light
+      const gridR = light ? 108 : 34;
+      const gridG = light ?  99 : 211;
+      const gridB = light ? 255 : 238;
+
       // ── Perspective depth lines (converge to VP) ──
       const NUM_DEPTH = 26;
       for (let c = 0; c <= NUM_DEPTH; c++) {
-        const u = c / NUM_DEPTH; // 0→1 across full width
+        const u = c / NUM_DEPTH;
         const bottomX = W * u;
-        const distFromCenter = Math.abs(u - 0.5) * 2; // 0 center, 1 edge
-        const alpha = Math.max(0.03, 0.18 - distFromCenter * 0.14);
-        ctx.strokeStyle = `rgba(34,211,238,${alpha})`;
+        const distFromCenter = Math.abs(u - 0.5) * 2;
+        const alpha = light
+          ? Math.max(0.05, 0.22 - distFromCenter * 0.16)
+          : Math.max(0.03, 0.18 - distFromCenter * 0.14);
+        ctx.strokeStyle = `rgba(${gridR},${gridG},${gridB},${alpha})`;
         ctx.lineWidth = 0.7;
         ctx.beginPath();
         ctx.moveTo(VPX, VPY);
@@ -61,11 +84,10 @@ export function CybercoreGrid({ className = "" }: { className?: string }) {
       const NUM_ROWS = 16;
       for (let r = 1; r <= NUM_ROWS; r++) {
         const rT = r / NUM_ROWS;
-        // Quadratic spacing for stronger perspective near horizon
         const y = VPY + (H - VPY) * (rT * rT * 0.4 + rT * 0.6);
         const halfW = (W * 0.5) * rT;
-        const alpha = 0.03 + rT * 0.12;
-        ctx.strokeStyle = `rgba(34,211,238,${alpha})`;
+        const alpha = light ? 0.04 + rT * 0.16 : 0.03 + rT * 0.12;
+        ctx.strokeStyle = `rgba(${gridR},${gridG},${gridB},${alpha})`;
         ctx.lineWidth = 0.6;
         ctx.beginPath();
         ctx.moveTo(VPX - halfW, y);
@@ -124,10 +146,11 @@ export function CybercoreGrid({ className = "" }: { className?: string }) {
         ctx.fillRect(bottomX - 1.5, barY, 3, capH);
       }
 
-      // Top fade — blends canvas into site background (#0a0a0f)
+      // Top fade — blends canvas into site background
+      const skyRgb = light ? "245,245,247" : "10,10,15";
       const topFade = ctx.createLinearGradient(0, 0, 0, H * 0.38);
-      topFade.addColorStop(0, "rgba(10,10,15,1)");
-      topFade.addColorStop(1, "rgba(10,10,15,0)");
+      topFade.addColorStop(0, `rgba(${skyRgb},1)`);
+      topFade.addColorStop(1, `rgba(${skyRgb},0)`);
       ctx.fillStyle = topFade;
       ctx.fillRect(0, 0, W, H);
 

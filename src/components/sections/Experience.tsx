@@ -1,11 +1,23 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { useRef } from "react";
+import { motion, useScroll, useSpring } from "framer-motion";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { ScrollReveal } from "@/components/ui/ScrollReveal";
 import { experience } from "@/data/experience";
 
 export function Experience() {
+  const timelineRef = useRef<HTMLDivElement>(null);
+  const { scrollYProgress } = useScroll({
+    target: timelineRef,
+    offset: ["start 80%", "end 20%"],
+  });
+  const scaleY = useSpring(scrollYProgress, {
+    stiffness: 80,
+    damping: 25,
+    restDelta: 0.001,
+  });
+
   return (
     <section id="experience" className="py-16 md:py-20 lg:py-24">
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -24,9 +36,19 @@ export function Experience() {
             </p>
           </ScrollReveal>
         ) : (
-          <div className="relative">
-            {/* Timeline line */}
-            <div className="absolute left-4 md:left-1/2 top-0 bottom-0 w-0.5 bg-border -translate-x-1/2" />
+          <div className="relative" ref={timelineRef}>
+            {/* Timeline line — grey track + scroll-driven fill */}
+            <div className="absolute left-4 md:left-1/2 top-0 bottom-0 w-0.5 -translate-x-1/2">
+              <div className="absolute inset-0 bg-border rounded-full" />
+              <motion.div
+                className="absolute top-0 left-0 right-0 bottom-0 rounded-full origin-top"
+                style={{
+                  scaleY,
+                  background:
+                    "linear-gradient(to bottom, #a855f7, #22d3ee)",
+                }}
+              />
+            </div>
 
             <div className="space-y-12">
               {experience.map((entry, index) => {
