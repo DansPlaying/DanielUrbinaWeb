@@ -158,4 +158,8 @@ export const skills: Skill[] = [
     name: "Contentful",
     category: "devops",
   },
+  {
+    name: "QuickBooks",
+    category: "devops",
+  },
 ];

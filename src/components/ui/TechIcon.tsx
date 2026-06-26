@@ -37,6 +37,7 @@ import {
   SiStrapi,
   SiContentful,
   SiOpenapiinitiative,
+  SiQuickbooks,
 } from "react-icons/si";
 import {
   Globe,
@@ -82,6 +83,7 @@ const techIconMap: Record<string, IconType> = {
   NPM: SiNpm,
   Composer: SiComposer,
   Insomnia: SiInsomnia,
+  QuickBooks: SiQuickbooks,
   Figma: SiFigma,
   Vercel: SiVercel,
   GitHub: SiGithub,

@@ -113,7 +113,8 @@
           "Improved Angular front-end rendering using OnPush change detection and lazy-loaded route modules, reducing unnecessary re-renders",
           "Designed versioned RESTful APIs with standardized error handling, consumed by both web and mobile clients",
           "Integrated third-party services via API, automating workflows that previously required manual intervention",
-          "Enforced Git branching strategy (feature branches, pull requests, code reviews) across the development team"
+          "Enforced Git branching strategy (feature branches, pull requests, code reviews) across the development team",
+          "Integrated QuickBooks API to synchronize financial data between the platform and accounting workflows, reducing manual reconciliation"
         ]
       },
       "digital-node": {

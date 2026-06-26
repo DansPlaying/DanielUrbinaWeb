@@ -113,7 +113,8 @@
           "Mejoré el renderizado en Angular usando OnPush change detection y módulos de ruta con lazy loading, reduciendo re-renders innecesarios",
           "Diseñé APIs RESTful versionadas con manejo estandarizado de errores, consumidas por clientes web y móviles",
           "Integré servicios de terceros vía API, automatizando flujos de trabajo que antes requerían intervención manual",
-          "Establecí estrategia de ramas Git (feature branches, pull requests, revisiones de código) en el equipo de desarrollo"
+          "Establecí estrategia de ramas Git (feature branches, pull requests, revisiones de código) en el equipo de desarrollo",
+          "Integré la API de QuickBooks para sincronizar datos financieros entre la plataforma y los flujos contables, reduciendo la conciliación manual"
         ]
       },
       "digital-node": {
