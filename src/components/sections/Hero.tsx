@@ -27,6 +27,8 @@ const scaleIn = {
 
 export function Hero() {
   const t = useTranslations("hero");
+  const roles = t.raw("roles") as string[];
+  const typeSequence = roles.flatMap((r) => [r, 2000]);
   return (
     <section className="relative min-h-screen flex items-center justify-center py-24 lg:py-32 overflow-hidden">
       {/* Background: gradient blobs + halftone wave */}
@@ -77,14 +79,7 @@ export function Hero() {
               transition={{ duration: 0.6, delay: 0.4 }}
             >
               <TypeAnimation
-                sequence={[
-                  "Full-Stack Developer",
-                  2000,
-                  "Problem Solver",
-                  2000,
-                  "Creative Coder",
-                  2000,
-                ]}
+                sequence={typeSequence}
                 wrapper="span"
                 speed={50}
                 repeat={Infinity}

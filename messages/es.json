@@ -10,6 +10,7 @@
     "greeting": "hola.mundo()",
     "hi": "Hola, soy",
     "description": "Desarrollo aplicaciones web escalables con Laravel, Angular, Vue.js, Next.js, Nest.js, Strapi, Contentful y Flutter. Enfocado en código limpio, APIs RESTful y experiencias de usuario excepcionales.",
+    "roles": ["Desarrollador Full-Stack", "Solucionador de Problemas", "Programador Creativo"],
     "viewMyWork": "Ver mi trabajo",
     "skills": "Habilidades"
   },

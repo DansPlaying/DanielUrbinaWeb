@@ -10,6 +10,7 @@
     "greeting": "hello.world()",
     "hi": "Hi, I'm",
     "description": "Building scalable web applications with Laravel, Angular, Vue.js, Next.js, Nest.js, Strapi, Contentful, and Flutter. Focused on clean code, RESTful APIs, and delivering great user experiences.",
+    "roles": ["Full-Stack Developer", "Problem Solver", "Creative Coder"],
     "viewMyWork": "View My Work",
     "skills": "Skills"
   },
