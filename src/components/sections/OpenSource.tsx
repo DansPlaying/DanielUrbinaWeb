@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect, useCallback } from "react";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import {
   Package,
   ExternalLink,
@@ -243,11 +243,55 @@ export function OpenSource() {
           </div>
         </ScrollReveal>
 
-        {/* Mobile: simple stacked cards */}
-        <div className="lg:hidden mt-4 grid grid-cols-1 md:grid-cols-3 gap-6">
-          {packages.map((pkg) => (
-            <PackageCard key={pkg.name} pkg={pkg} isFront={false} />
-          ))}
+        {/* Mobile: single-card carousel */}
+        <div className="lg:hidden mt-4">
+          <div className="relative px-10">
+            {/* Fixed height = tallest card — prevents layout jump on transition */}
+            <div className="h-[340px]">
+              <AnimatePresence mode="wait">
+                <motion.div
+                  key={activePkgIdx}
+                  className="h-full"
+                  initial={{ opacity: 0, x: 30 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  exit={{ opacity: 0, x: -30 }}
+                  transition={{ duration: 0.25, ease: "easeOut" }}
+                >
+                  <PackageCard pkg={packages[activePkgIdx]} isFront={true} />
+                </motion.div>
+              </AnimatePresence>
+            </div>
+
+            <button
+              onClick={prev}
+              className="absolute left-0 top-1/2 -translate-y-1/2 w-9 h-9 rounded-full bg-background border border-border hover:border-accent-purple/50 flex items-center justify-center text-text-secondary hover:text-accent-purple transition-all"
+              aria-label="Previous package"
+            >
+              <ChevronLeft size={18} />
+            </button>
+            <button
+              onClick={next}
+              className="absolute right-0 top-1/2 -translate-y-1/2 w-9 h-9 rounded-full bg-background border border-border hover:border-accent-purple/50 flex items-center justify-center text-text-secondary hover:text-accent-purple transition-all"
+              aria-label="Next package"
+            >
+              <ChevronRight size={18} />
+            </button>
+          </div>
+
+          <div className="flex justify-center gap-2 mt-4">
+            {packages.map((_, i) => (
+              <button
+                key={i}
+                onClick={() => goToPackage(i)}
+                className={`h-2 rounded-full transition-all duration-300 ${
+                  activePkgIdx === i
+                    ? "w-6 bg-accent-purple"
+                    : "w-2 bg-border hover:bg-accent-purple/40"
+                }`}
+                aria-label={`Package ${i + 1}`}
+              />
+            ))}
+          </div>
         </div>
 
         {/* Desktop (lg+): 3D circular carousel */}
