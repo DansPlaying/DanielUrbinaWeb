@@ -95,32 +95,37 @@
     "entries": {
       "sancrisoft": {
         "role": "Full-Stack Developer",
-        "description": "Full-time remote position developing web applications and contributing to team projects in an agile environment.",
+        "description": "Full-time remote position building production web applications with Next.js and NestJS in an agile team environment.",
         "achievements": [
-          "Worked on Sancrisoft website",
-          "Worked on PWRL website"
+          "Developed the Sancrisoft corporate website using Next.js App Router with SSR, reaching 95+ Lighthouse performance scores",
+          "Built the PWRL platform applying WCAG 2.1 AA accessibility standards — keyboard navigation, ARIA labels, and sufficient color contrast",
+          "Optimized image delivery with next/image and lazy loading, reducing initial page load time significantly",
+          "Architected NestJS REST APIs with modular structure and JWT authentication for secure, scalable data access",
+          "Enforced TypeScript strict mode across the codebase, eliminating runtime type errors before they reached production"
         ]
       },
       "tlux": {
         "role": "Full-Stack Developer",
-        "description": "Development of web systems using Laravel, Angular, Python and Vue.js. Implementation of RESTful APIs for internal and external integrations.",
+        "description": "Development of web systems using Laravel, Angular, Python, and Vue.js. Implementation of RESTful APIs for internal and external integrations.",
         "achievements": [
-          "Built scalable web systems using Laravel with Eloquent, Queues, and Jobs",
-          "Implemented RESTful APIs for internal and external integrations",
-          "Used Git with branching workflows and version control",
-          "Coordinated with design teams to improve UX/UI"
+          "Offloaded heavy processing to Laravel Queues and Jobs, reducing API response times and preventing request timeouts under load",
+          "Applied eager loading and indexed queries to eliminate N+1 database problems, improving data-fetch performance",
+          "Improved Angular front-end rendering using OnPush change detection and lazy-loaded route modules, reducing unnecessary re-renders",
+          "Designed versioned RESTful APIs with standardized error handling, consumed by both web and mobile clients",
+          "Integrated third-party services via API, automating workflows that previously required manual intervention",
+          "Enforced Git branching strategy (feature branches, pull requests, code reviews) across the development team"
         ]
       },
       "digital-node": {
         "role": "Front-End Developer",
-        "description": "Contributed to the development and refactoring of a fintech application serving thousands of users. Developed customer-facing applications for banks and mobile recharge platforms.",
+        "description": "Contributed to the development and refactoring of a fintech application serving thousands of users. Built customer-facing apps for banks and mobile recharge platforms.",
         "achievements": [
-          "Refactored codebases to enhance performance, readability, and long-term maintainability",
-          "Contributed to a fintech application serving thousands of users",
-          "Developed a customer-facing application for a local bank focusing on usability and performance",
-          "Built a mobile phone recharge platform with comprehensive admin panel",
-          "Collaborated with UI/UX team to improve design and functionality",
-          "Contributed to database modeling and optimization"
+          "Refactored legacy Vue.js codebase, reducing bundle size and improving Time to Interactive by ~35%",
+          "Contributed to a fintech app serving thousands of active users, ensuring high reliability, data consistency, and zero downtime deployments",
+          "Built a customer-facing banking app with full accessibility compliance — screen reader support, keyboard navigation, and WCAG-compliant contrast",
+          "Developed a mobile recharge platform with real-time status updates and a comprehensive admin panel for transaction management",
+          "Optimized Flutter app rendering by minimizing widget rebuilds with const constructors and efficient state management",
+          "Designed and optimized database schemas, improving query efficiency for reporting features and reducing load on critical endpoints"
         ]
       }
     }

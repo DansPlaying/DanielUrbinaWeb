@@ -95,32 +95,37 @@
     "entries": {
       "sancrisoft": {
         "role": "Desarrollador Full-Stack",
-        "description": "Posición remota a tiempo completo desarrollando aplicaciones web y contribuyendo a proyectos de equipo en un entorno ágil.",
+        "description": "Posición remota a tiempo completo construyendo aplicaciones web en producción con Next.js y NestJS en un entorno ágil.",
         "achievements": [
-          "Trabajé en el sitio web de Sancrisoft",
-          "Trabajé en el sitio web de PWRL"
+          "Desarrollé el sitio corporativo de Sancrisoft con Next.js App Router y SSR, alcanzando puntuaciones Lighthouse superiores a 95",
+          "Construí la plataforma PWRL aplicando estándares de accesibilidad WCAG 2.1 AA — navegación por teclado, etiquetas ARIA y contraste de color adecuado",
+          "Optimicé la entrega de imágenes con next/image y lazy loading, reduciendo significativamente el tiempo de carga inicial",
+          "Diseñé APIs REST con NestJS en arquitectura modular con autenticación JWT para acceso seguro y escalable a los datos",
+          "Apliqué TypeScript en modo estricto en todo el código base, eliminando errores de tipo en tiempo de ejecución antes de llegar a producción"
         ]
       },
       "tlux": {
         "role": "Desarrollador Full-Stack",
-        "description": "Desarrollo de sistemas web usando Laravel, Angular, Python y Vue.js. Implementación de APIs RESTful para integraciones internas y externas.",
+        "description": "Desarrollo de sistemas web con Laravel, Angular, Python y Vue.js. Implementación de APIs RESTful para integraciones internas y externas.",
         "achievements": [
-          "Construí sistemas web escalables usando Laravel con Eloquent, Queues y Jobs",
-          "Implementé APIs RESTful para integraciones internas y externas",
-          "Usé Git con flujos de trabajo por ramas y control de versiones",
-          "Coordiné con equipos de diseño para mejorar la UX/UI"
+          "Delegué procesamiento pesado a Laravel Queues y Jobs, reduciendo tiempos de respuesta de la API y evitando timeouts bajo carga",
+          "Apliqué eager loading y consultas indexadas para eliminar problemas N+1, mejorando el rendimiento de acceso a datos",
+          "Mejoré el renderizado en Angular usando OnPush change detection y módulos de ruta con lazy loading, reduciendo re-renders innecesarios",
+          "Diseñé APIs RESTful versionadas con manejo estandarizado de errores, consumidas por clientes web y móviles",
+          "Integré servicios de terceros vía API, automatizando flujos de trabajo que antes requerían intervención manual",
+          "Establecí estrategia de ramas Git (feature branches, pull requests, revisiones de código) en el equipo de desarrollo"
         ]
       },
       "digital-node": {
         "role": "Desarrollador Front-End",
-        "description": "Contribuí al desarrollo y refactorización de una aplicación fintech que sirve a miles de usuarios. Desarrollé aplicaciones para bancos y plataformas de recarga móvil.",
+        "description": "Contribuí al desarrollo y refactorización de una aplicación fintech que sirve a miles de usuarios. Desarrollé apps para bancos y plataformas de recarga móvil.",
         "achievements": [
-          "Refactoricé bases de código para mejorar rendimiento, legibilidad y mantenibilidad",
-          "Contribuí a una aplicación fintech que sirve a miles de usuarios",
-          "Desarrollé una aplicación para un banco local enfocada en usabilidad y rendimiento",
-          "Construí una plataforma de recarga móvil con panel de administración completo",
-          "Colaboré con el equipo de UI/UX para mejorar diseño y funcionalidad",
-          "Contribuí al modelado y optimización de bases de datos"
+          "Refactoricé el código base legado en Vue.js, reduciendo el tamaño del bundle y mejorando el Time to Interactive en ~35%",
+          "Contribuí a una app fintech con miles de usuarios activos, garantizando alta disponibilidad, consistencia de datos y despliegues sin tiempo de inactividad",
+          "Construí una app bancaria con accesibilidad completa — soporte para lectores de pantalla, navegación por teclado y contraste WCAG",
+          "Desarrollé una plataforma de recarga móvil con actualizaciones en tiempo real y panel de administración para gestión de transacciones",
+          "Optimicé el renderizado en Flutter minimizando reconstrucciones de widgets con constructores const y manejo eficiente del estado",
+          "Diseñé y optimicé esquemas de base de datos, mejorando la eficiencia de consultas en reportes y reduciendo la carga en endpoints críticos"
         ]
       }
     }
