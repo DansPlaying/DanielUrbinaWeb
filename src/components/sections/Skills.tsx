@@ -3,6 +3,7 @@
 import { useRef, useState, useEffect } from "react";
 import { useScroll, useVelocity, useAnimationFrame } from "framer-motion";
 import { useTheme } from "next-themes";
+import { useTranslations } from "next-intl";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { TechIcon } from "@/components/ui/TechIcon";
 import { ScrollReveal } from "@/components/ui/ScrollReveal";
@@ -96,6 +97,7 @@ function MarqueeRow({
 }
 
 export function Skills() {
+  const t = useTranslations("skills");
   const { theme } = useTheme();
   const [mounted, setMounted] = useState(false);
   useEffect(() => setMounted(true), []);
@@ -113,9 +115,9 @@ export function Skills() {
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <ScrollReveal>
           <SectionHeading
-            title="Skills &"
-            highlight="Technologies"
-            description="The tools and technologies I work with"
+            title={t("title")}
+            highlight={t("highlight")}
+            description={t("description")}
           />
         </ScrollReveal>
       </div>

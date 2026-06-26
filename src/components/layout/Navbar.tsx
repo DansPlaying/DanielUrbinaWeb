@@ -3,72 +3,54 @@
 import { useState, useEffect, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X, Download } from "lucide-react";
+import { useTranslations } from "next-intl";
 import { Logo } from "@/components/ui/Logo";
 import { Button } from "@/components/ui/Button";
 import { ThemeToggle } from "@/components/ui/ThemeToggle";
+import { LanguageSwitcher } from "@/components/ui/LanguageSwitcher";
 import { cn } from "@/lib/utils";
 
-const navLinks = [
-  { label: "Open Source", href: "#open-source", id: "open-source" },
-  { label: "About", href: "#about", id: "about" },
-  { label: "Skills", href: "#skills", id: "skills" },
-  { label: "Projects", href: "#projects", id: "projects" },
-  { label: "Experience", href: "#experience", id: "experience" },
-  // { label: "Contact", href: "#contact", id: "contact" },
-];
-
 export function Navbar() {
+  const t = useTranslations("nav");
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileOpen, setIsMobileOpen] = useState(false);
   const [activeSection, setActiveSection] = useState<string | null>(null);
   const observerRef = useRef<IntersectionObserver | null>(null);
 
-  // Scroll detection
+  const navLinks = [
+    { label: t("openSource"), href: "#open-source", id: "open-source" },
+    { label: t("about"), href: "#about", id: "about" },
+    { label: t("skills"), href: "#skills", id: "skills" },
+    { label: t("projects"), href: "#projects", id: "projects" },
+    { label: t("experience"), href: "#experience", id: "experience" },
+  ];
+
   useEffect(() => {
     const handleScroll = () => setIsScrolled(window.scrollY > 50);
     window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // Active section tracking with Intersection Observer
   useEffect(() => {
     const sectionIds = navLinks.map((link) => link.id);
-
     observerRef.current = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            setActiveSection(entry.target.id);
-          }
+          if (entry.isIntersecting) setActiveSection(entry.target.id);
         });
       },
-      {
-        rootMargin: "-20% 0px -70% 0px", // Trigger when section is ~30% from top
-        threshold: 0,
-      }
+      { rootMargin: "-20% 0px -70% 0px", threshold: 0 }
     );
-
     sectionIds.forEach((id) => {
       const element = document.getElementById(id);
-      if (element) {
-        observerRef.current?.observe(element);
-      }
+      if (element) observerRef.current?.observe(element);
     });
-
-    return () => {
-      observerRef.current?.disconnect();
-    };
+    return () => observerRef.current?.disconnect();
   }, []);
 
   useEffect(() => {
-    if (isMobileOpen) {
-      document.body.style.overflow = "hidden";
-    } else {
-      document.body.style.overflow = "";
-    }
-    return () => {
-      document.body.style.overflow = "";
-    };
+    document.body.style.overflow = isMobileOpen ? "hidden" : "";
+    return () => { document.body.style.overflow = ""; };
   }, [isMobileOpen]);
 
   useEffect(() => {
@@ -88,17 +70,11 @@ export function Navbar() {
       }`}
     >
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 md:h-20 flex items-center justify-between">
-        {/* Logo */}
-        <a
-          href="#"
-          className="flex-shrink-0"
-          aria-label="Back to top"
-        >
+        <a href="#" className="flex-shrink-0" aria-label="Back to top">
           <Logo size="sm" className="md:hidden" />
           <Logo size="md" className="hidden md:block" />
         </a>
 
-        {/* Desktop nav links */}
         <div className="hidden md:flex md:items-center md:space-x-8">
           {navLinks.map((link) => (
             <a
@@ -116,22 +92,13 @@ export function Navbar() {
           ))}
         </div>
 
-        {/* Desktop CTA & Theme Toggle */}
-        <div className="hidden md:flex items-center gap-4">
+        <div className="hidden md:flex items-center gap-3">
+          <LanguageSwitcher />
           <ThemeToggle />
-          {/* <Button
-            variant="primary"
-            href="/Daniel-Urbina-Resume.pdf"
-            className="text-sm py-2 px-4"
-            download
-          >
-            <Download size={16} />
-            Download CV
-          </Button> */}
         </div>
 
-        {/* Mobile: Theme Toggle + Hamburger */}
         <div className="flex items-center gap-3 md:hidden">
+          <LanguageSwitcher />
           <ThemeToggle />
           <button
             className="p-2 text-text-primary hover:bg-background-tertiary rounded-md transition-colors"
@@ -144,11 +111,9 @@ export function Navbar() {
         </div>
       </nav>
 
-      {/* Mobile drawer */}
       <AnimatePresence>
         {isMobileOpen && (
           <>
-            {/* Backdrop */}
             <motion.div
               className="fixed inset-0 bg-black/50 backdrop-blur-sm z-40"
               initial={{ opacity: 0 }}
@@ -156,8 +121,6 @@ export function Navbar() {
               exit={{ opacity: 0 }}
               onClick={() => setIsMobileOpen(false)}
             />
-
-            {/* Drawer panel */}
             <motion.div
               className="fixed top-0 right-0 bottom-0 w-full max-w-sm bg-background-secondary z-50 shadow-xl p-6"
               initial={{ x: "100%" }}
@@ -168,7 +131,6 @@ export function Navbar() {
               aria-modal="true"
               aria-label="Navigation menu"
             >
-              {/* Close button */}
               <div className="flex justify-end mb-8">
                 <button
                   className="p-2 text-text-primary hover:bg-background-tertiary rounded-md transition-colors"
@@ -178,8 +140,6 @@ export function Navbar() {
                   <X size={24} />
                 </button>
               </div>
-
-              {/* Links */}
               <nav className="space-y-6">
                 {navLinks.map((link) => (
                   <a
@@ -197,8 +157,6 @@ export function Navbar() {
                   </a>
                 ))}
               </nav>
-
-              {/* CTA */}
               <div className="mt-8">
                 <Button
                   variant="primary"

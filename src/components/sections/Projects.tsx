@@ -5,6 +5,7 @@ import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import { ExternalLink, Github, ChevronLeft, ChevronRight } from "lucide-react";
 import { useTheme } from "next-themes";
+import { useTranslations } from "next-intl";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { ScrollReveal } from "@/components/ui/ScrollReveal";
 import { CybercoreGrid } from "@/components/ui/CybercoreGrid";
@@ -104,6 +105,7 @@ function FanCard({
 }
 
 export function Projects() {
+  const t = useTranslations("projects");
   const { theme } = useTheme();
   const [mounted, setMounted] = useState(false);
   useEffect(() => setMounted(true), []);
@@ -142,9 +144,9 @@ export function Projects() {
         <div className="relative z-10 h-full flex flex-col items-center justify-center pt-8">
           <ScrollReveal>
             <SectionHeading
-              title="Featured"
-              highlight="Projects"
-              description="Click a card or use ← → keys to explore"
+              title={t("title")}
+              highlight={t("highlight")}
+              description={t("description")}
             />
           </ScrollReveal>
         </div>
@@ -226,7 +228,7 @@ export function Projects() {
               </span>
               <span className="text-border">·</span>
               <span className="font-mono text-xs text-text-secondary capitalize">
-                {active.category}
+                {t(`categories.${active.category}`)}
               </span>
             </div>
 
@@ -235,7 +237,7 @@ export function Projects() {
             </h3>
 
             <p className="text-text-secondary leading-relaxed text-sm md:text-base">
-              {active.description}
+              {t(`items.${active.id}.description`)}
             </p>
 
             <div className="flex flex-wrap justify-center gap-2 mt-4">
@@ -258,7 +260,7 @@ export function Projects() {
                   className="flex items-center gap-1.5 text-sm font-medium text-accent-cyan hover:text-text-highlight transition-colors"
                 >
                   <ExternalLink size={14} />
-                  Live Demo
+                  {t("liveDemo")}
                 </a>
               )}
               {active.links.github && (
@@ -269,7 +271,7 @@ export function Projects() {
                   className="flex items-center gap-1.5 text-sm font-medium text-accent-cyan hover:text-text-highlight transition-colors"
                 >
                   <Github size={14} />
-                  Source Code
+                  {t("sourceCode")}
                 </a>
               )}
             </div>

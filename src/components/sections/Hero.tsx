@@ -6,6 +6,7 @@ import { TypeAnimation } from "react-type-animation";
 import { Button } from "@/components/ui/Button";
 import { SocialIcon } from "@/components/ui/SocialIcon";
 import { WaveCanvas } from "@/components/ui/WaveCanvas";
+import { useTranslations } from "next-intl";
 import { socials } from "@/data/socials";
 
 // Animation variants for page load sequence
@@ -25,6 +26,7 @@ const scaleIn = {
 };
 
 export function Hero() {
+  const t = useTranslations("hero");
   return (
     <section className="relative min-h-screen flex items-center justify-center py-24 lg:py-32 overflow-hidden">
       {/* Background: gradient blobs + halftone wave */}
@@ -51,7 +53,7 @@ export function Hero() {
               animate="visible"
               transition={{ duration: 0.6, delay: 0.2 }}
             >
-              <span className="text-text-secondary">&gt;</span> hello.world()
+              <span className="text-text-secondary">&gt;</span> {t("greeting")}
             </motion.div>
 
             <motion.h1
@@ -61,7 +63,7 @@ export function Hero() {
               animate="visible"
               transition={{ duration: 0.6, delay: 0.3 }}
             >
-              <span className="block">Hi, I&apos;m </span>
+              <span className="block">{t("hi")} </span>
               <span className="bg-gradient-accent bg-clip-text text-transparent block">
                 Daniel Urbina
               </span>
@@ -97,9 +99,7 @@ export function Hero() {
               animate="visible"
               transition={{ duration: 0.6, delay: 0.5 }}
             >
-              Building scalable web applications with Laravel, Angular, Vue.js,
-              Next.js, Nest.js, Strapi, Contentful, and Flutter. Focused on
-              clean code, RESTful APIs, and delivering great user experiences.
+              {t("description")}
             </motion.p>
 
             <motion.div
@@ -110,10 +110,10 @@ export function Hero() {
               transition={{ duration: 0.6, delay: 0.6 }}
             >
               <Button variant="primary" href="#projects">
-                View My Work
+                {t("viewMyWork")}
               </Button>
               <Button variant="secondary" href="#skills">
-                Skills
+                {t("skills")}
               </Button>
             </motion.div>
 

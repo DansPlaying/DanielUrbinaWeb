@@ -10,6 +10,7 @@ import {
   ChevronRight,
 } from "lucide-react";
 import { FaGithub } from "react-icons/fa";
+import { useTranslations } from "next-intl";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { ScrollReveal } from "@/components/ui/ScrollReveal";
 
@@ -147,6 +148,7 @@ function PackageCard({
 }
 
 export function OpenSource() {
+  const t = useTranslations("openSource");
   const [activeIndex, setActiveIndex] = useState(0);
   const [cumulativeRotation, setCumulativeRotation] = useState(0);
   const [isPaused, setIsPaused] = useState(false);
@@ -226,7 +228,7 @@ export function OpenSource() {
           <div className="flex justify-center mb-6">
             <div className="inline-flex items-center gap-2 border border-accent-purple/30 bg-accent-purple/10 rounded-full px-4 py-1.5 text-sm font-mono text-accent-purple">
               <span className="w-1.5 h-1.5 rounded-full bg-accent-purple animate-pulse" />
-              Open Source Contributor
+              {t("badge")}
             </div>
           </div>
         </ScrollReveal>
@@ -234,9 +236,9 @@ export function OpenSource() {
         <ScrollReveal delay={0.05}>
           <div className="pt-4 pb-2">
             <SectionHeading
-              title="NPM"
-              highlight="Packages"
-              description="3 open source Strapi v5 plugins published to the NPM registry — solving real gaps in the Strapi ecosystem"
+              title={t("title")}
+              highlight={t("highlight")}
+              description={t("description")}
             />
           </div>
         </ScrollReveal>
@@ -338,8 +340,7 @@ export function OpenSource() {
         {/* Footer */}
         <ScrollReveal delay={0.3}>
           <p className="text-center text-text-secondary text-xs mt-8 pb-4 font-mono pt-10">
-            <span className="text-accent-purple">&gt;</span> All packages
-            available on{" "}
+            <span className="text-accent-purple">&gt;</span> {t("footer")}{" "}
             <a
               href="https://www.npmjs.com/~dans007"
               target="_blank"

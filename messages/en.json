@@ -1,0 +1,135 @@
+{
+  "nav": {
+    "openSource": "Open Source",
+    "about": "About",
+    "skills": "Skills",
+    "projects": "Projects",
+    "experience": "Experience"
+  },
+  "hero": {
+    "greeting": "hello.world()",
+    "hi": "Hi, I'm",
+    "description": "Building scalable web applications with Laravel, Angular, Vue.js, Next.js, Nest.js, Strapi, Contentful, and Flutter. Focused on clean code, RESTful APIs, and delivering great user experiences.",
+    "viewMyWork": "View My Work",
+    "skills": "Skills"
+  },
+  "about": {
+    "title": "About",
+    "highlight": "Me",
+    "description": "Get to know the person behind the code",
+    "terminal": "daniel.about()",
+    "bio1": "I'm a <bold>Full-Stack Developer</bold> and <bold>Electronic Engineer</bold> graduated <cyan>Summa Cum Laude</cyan>. I build scalable, production-ready web applications using Laravel, Node.js, Next.js, Python, and Angular — with additional experience in Vue.js, Flutter, and headless CMS platforms like <medium>Strapi</medium> and <medium>Contentful</medium>.",
+    "bio2": "I care deeply about clean architecture, RESTful API design, database modeling, and shipping code that holds up under pressure. An engineering background means I bring rigor and first-principles thinking to every layer of the stack.",
+    "bio3": "Beyond the screen, I'm a <medium>gym regular</medium> — consistency in training carries over to consistency in code. I'm also a <medium>space geek</medium> at heart; nothing resets perspective quite like thinking at cosmic scale.",
+    "location": "Venezuela",
+    "available": "Available for work",
+    "stats": {
+      "years": "Years Experience",
+      "projects": "Projects Completed",
+      "technologies": "Technologies",
+      "commitment": "Commitment"
+    }
+  },
+  "skills": {
+    "title": "Skills &",
+    "highlight": "Technologies",
+    "description": "The tools and technologies I work with"
+  },
+  "openSource": {
+    "badge": "Open Source Contributor",
+    "title": "NPM",
+    "highlight": "Packages",
+    "description": "3 open source Strapi v5 plugins published to the NPM registry — solving real gaps in the Strapi ecosystem",
+    "footer": "All packages available on",
+    "npm": "NPM",
+    "github": "GitHub"
+  },
+  "projects": {
+    "title": "Featured",
+    "highlight": "Projects",
+    "description": "A selection of projects I've built",
+    "liveDemo": "Live Demo",
+    "sourceCode": "Source Code",
+    "categories": {
+      "web": "Web",
+      "tool": "Tool",
+      "mobile": "Mobile"
+    },
+    "items": {
+      "coalitions-assessment": {
+        "description": "Healthcare patient management dashboard built as a frontend technical assessment. Features real-time vital signs, diagnosis history charts, and lab results."
+      },
+      "inventory-management": {
+        "description": "A comprehensive inventory management system with credit control features. Built with Next.js and Neon database."
+      },
+      "portfolio-website": {
+        "description": "My personal portfolio website showcasing my work and skills. Built with Next.js, TypeScript, and Tailwind CSS."
+      },
+      "sancrisoft-website": {
+        "description": "Corporate website for Sancrisoft, a software development company. Built as part of the development team."
+      },
+      "sancrisoft-business-wizard": {
+        "description": "Multi-step business registration form built as a technical assessment for Sancrisoft. Features a clean wizard interface with form validation and progress tracking."
+      },
+      "unet-grade-calculator": {
+        "description": "Academic grade calculator designed for UNET students to convert and project their grades throughout the semester."
+      },
+      "trama-graph": {
+        "description": "Real-time gas sensor monitoring system with Arduino integration, featuring live data visualization, configurable alerts, and data persistence."
+      },
+      "cycle-app": {
+        "description": "A Flutter mobile application for tracking women's menstrual cycles with predictions and health insights."
+      },
+      "ensolvers-notes-app": {
+        "description": "Full-stack notes application with authentication, tagging, and archiving. Built as a technical assessment for ENSOLVERS."
+      }
+    }
+  },
+  "experience": {
+    "title": "Work",
+    "highlight": "Experience",
+    "description": "My professional journey so far",
+    "present": "Present",
+    "location": "Remote",
+    "entries": {
+      "sancrisoft": {
+        "role": "Full-Stack Developer",
+        "description": "Full-time remote position developing web applications and contributing to team projects in an agile environment.",
+        "achievements": [
+          "Worked on Sancrisoft website",
+          "Worked on PWRL website"
+        ]
+      },
+      "tlux": {
+        "role": "Full-Stack Developer",
+        "description": "Development of web systems using Laravel, Angular, Python and Vue.js. Implementation of RESTful APIs for internal and external integrations.",
+        "achievements": [
+          "Built scalable web systems using Laravel with Eloquent, Queues, and Jobs",
+          "Implemented RESTful APIs for internal and external integrations",
+          "Used Git with branching workflows and version control",
+          "Coordinated with design teams to improve UX/UI"
+        ]
+      },
+      "digital-node": {
+        "role": "Front-End Developer",
+        "description": "Contributed to the development and refactoring of a fintech application serving thousands of users. Developed customer-facing applications for banks and mobile recharge platforms.",
+        "achievements": [
+          "Refactored codebases to enhance performance, readability, and long-term maintainability",
+          "Contributed to a fintech application serving thousands of users",
+          "Developed a customer-facing application for a local bank focusing on usability and performance",
+          "Built a mobile phone recharge platform with comprehensive admin panel",
+          "Collaborated with UI/UX team to improve design and functionality",
+          "Contributed to database modeling and optimization"
+        ]
+      }
+    }
+  },
+  "footer": {
+    "tagline": "Building digital experiences with code and creativity.",
+    "quickLinks": "Quick Links",
+    "connect": "Connect",
+    "copyright": "© {year} Daniel Urbina. All rights reserved.",
+    "builtWith": "Built with",
+    "deployedOn": "& deployed on"
+  }
+}
