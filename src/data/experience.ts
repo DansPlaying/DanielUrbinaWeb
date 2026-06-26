@@ -19,7 +19,7 @@ export const experience: Experience[] = [
     role: "Full-Stack Developer",
     description:
       "Development of web systems using Laravel (Eloquent, Queues, Jobs), Angular, Python and Vue.js. Implementation of RESTful APIs for internal and external integrations.",
-    startDate: "Dec 2024",
+    startDate: "Dec 2023",
     endDate: "Jul 2025",
     location: "Remote",
     achievements: [
