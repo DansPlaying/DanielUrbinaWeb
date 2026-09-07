@@ -60,6 +60,8 @@ export const projects: Project[] = [
     tags: ["Flutter", "Dart", "Firebase", "Next.js", "Payments", "CRM"],
     featured: true,
     realProject: true,
+    teamProject: true,
+    teamCompany: "Digital Node",
     rightsHolder: "Infinitics",
     category: "mobile",
     links: {
@@ -116,6 +118,8 @@ export const projects: Project[] = [
     tags: ["Flutter", "Dart", "Firebase", "AWS", "IoT", "Sustainability"],
     featured: true,
     realProject: true,
+    teamProject: true,
+    teamCompany: "Digital Node",
     privateSource: true,
     rightsHolder: "Centinela El Guardián de los Páramos",
     category: "mobile",
