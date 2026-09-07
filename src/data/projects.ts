@@ -64,6 +64,8 @@ export const projects: Project[] = [
     category: "mobile",
     links: {
       demo: "https://app-infinitics-web.web.app",
+      googlePlay:
+        "https://play.google.com/store/apps/details?id=com.infinitics.infinitis_clientc",
     },
     contact: {
       name: "Melvick Ocanto",
