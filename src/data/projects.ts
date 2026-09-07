@@ -31,9 +31,9 @@ export const projects: Project[] = [
     description:
       "Corporate website for Sancrisoft, a software development company. Built as part of the development team.",
     longDescription:
-      "Contributed to building the official corporate website for Sancrisoft, a software development company specializing in custom solutions. The site showcases the company's services, team, and portfolio with a modern, professional design optimized for lead generation and brand presence.",
+      "Contributed to building the official corporate website for Sancrisoft, a software development company specializing in custom solutions. The site showcases the company's services, team, and portfolio with a modern, professional design optimized for lead generation and brand presence. Content is delivered from Strapi as a headless CMS, so the team can update services, people, and portfolio entries without a code deploy.",
     image: "/images/projects/sancrisoft-web.png",
-    tags: ["Next.js", "React", "TypeScript", "Corporate"],
+    tags: ["Next.js", "React", "TypeScript", "Strapi", "Corporate"],
     featured: true,
     realProject: true,
     teamProject: true,
@@ -77,9 +77,16 @@ export const projects: Project[] = [
     description:
       "Investor-facing website for PWRL (Nasdaq: PWRL), a closed-end fund giving public investors exposure to private tech companies. Built with the Sancrisoft development team.",
     longDescription:
-      "Contributed, as part of the Sancrisoft development team, to the public website of Powerlaw Corp. — a Nasdaq-listed closed-end fund whose pitch is access, through a single publicly traded ticker, to private technology companies that retail investors normally cannot reach: SpaceX, OpenAI, Stripe, Databricks, Figma, Perplexity, Waymo, and others. The site has to serve two audiences at once. For prospective investors it explains the fund's vision, its portfolio holdings, and how to trade the stock. For existing shareholders and regulators it acts as an investor-relations hub, surfacing monthly NAV reporting, quarterly portfolio disclosures, SEC filings, board and governance information, and the risk disclaimers a regulated fund is required to publish. Because the audience skews broad and the content is financial and legally sensitive, accessibility and clarity were treated as requirements rather than polish: I worked on the front end applying WCAG 2.1 AA standards — keyboard navigation, ARIA labelling, and sufficient color contrast over the site's dark, image-heavy hero treatments — so the disclosures stay readable for every visitor.",
+      "Contributed, as part of the Sancrisoft development team, to the public website of Powerlaw Corp. — a Nasdaq-listed closed-end fund whose pitch is access, through a single publicly traded ticker, to private technology companies that retail investors normally cannot reach: SpaceX, OpenAI, Stripe, Databricks, Figma, Perplexity, Waymo, and others. The site has to serve two audiences at once. For prospective investors it explains the fund's vision, its portfolio holdings, and how to trade the stock. For existing shareholders and regulators it acts as an investor-relations hub, surfacing monthly NAV reporting, quarterly portfolio disclosures, SEC filings, board and governance information, and the risk disclaimers a regulated fund is required to publish. Because the audience skews broad and the content is financial and legally sensitive, accessibility and clarity were treated as requirements rather than polish: I worked on the front end applying WCAG 2.1 AA standards — keyboard navigation, ARIA labelling, and sufficient color contrast over the site's dark, image-heavy hero treatments — so the disclosures stay readable for every visitor. The site's content is served from Contentful as a headless CMS, which lets the fund's team publish updates and disclosures without going through a code deploy.",
     image: "/images/projects/pwrl.webp",
-    tags: ["Next.js", "React", "TypeScript", "Accessibility", "Fintech"],
+    tags: [
+      "Next.js",
+      "React",
+      "TypeScript",
+      "Contentful",
+      "Accessibility",
+      "Fintech",
+    ],
     featured: true,
     realProject: true,
     teamProject: true,
