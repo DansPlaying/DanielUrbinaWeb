@@ -72,17 +72,23 @@
       "mobile": "Móvil"
     },
     "items": {
-      "coalitions-assessment": {
-        "description": "Panel de gestión de pacientes construido como evaluación técnica de frontend. Muestra signos vitales en tiempo real, gráficas de historial de diagnósticos y resultados de laboratorio."
+      "chaski": {
+        "description": "Agente de IA para comercio conversacional, desarrollado en Sancrisoft. Responde a los clientes de una tienda 24/7 en web y WhatsApp con el catálogo y las políticas reales del negocio."
+      },
+      "sancrisoft-website": {
+        "description": "Sitio web corporativo de Sancrisoft, una empresa de desarrollo de software. Construido como parte del equipo de desarrollo."
+      },
+      "cycle-app": {
+        "description": "Aplicación móvil Flutter para rastrear ciclos menstruales con predicciones e información de salud."
       },
       "inventory-management": {
         "description": "Sistema completo de gestión de inventario con control de crédito. Construido con Next.js y base de datos Neon."
       },
+      "coalitions-assessment": {
+        "description": "Panel de gestión de pacientes construido como evaluación técnica de frontend. Muestra signos vitales en tiempo real, gráficas de historial de diagnósticos y resultados de laboratorio."
+      },
       "portfolio-website": {
         "description": "Mi sitio web de portafolio personal que muestra mi trabajo y habilidades. Construido con Next.js, TypeScript y Tailwind CSS."
-      },
-      "sancrisoft-website": {
-        "description": "Sitio web corporativo de Sancrisoft, una empresa de desarrollo de software. Construido como parte del equipo de desarrollo."
       },
       "sancrisoft-business-wizard": {
         "description": "Formulario de registro empresarial de múltiples pasos, construido como evaluación técnica para Sancrisoft. Presenta una interfaz de asistente limpia con validación de formularios y seguimiento del progreso."
@@ -92,9 +98,6 @@
       },
       "trama-graph": {
         "description": "Sistema de monitoreo de sensores de gas en tiempo real con integración de Arduino, visualización de datos en vivo, alertas configurables y persistencia de datos."
-      },
-      "cycle-app": {
-        "description": "Aplicación móvil Flutter para rastrear ciclos menstruales con predicciones e información de salud."
       },
       "ensolvers-notes-app": {
         "description": "Aplicación de notas full-stack con autenticación, etiquetado y archivado. Construida como evaluación técnica para ENSOLVERS."

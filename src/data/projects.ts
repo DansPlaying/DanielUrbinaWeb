@@ -2,20 +2,52 @@ import { Project } from "@/lib/types";
 
 export const projects: Project[] = [
   {
-    id: "coalitions-assessment",
-    title: "Tech.Care Patient Dashboard",
+    id: "chaski",
+    title: "Chaski",
     description:
-      "Healthcare patient management dashboard built as a frontend technical assessment. Features real-time vital signs, diagnosis history charts, and lab results.",
+      "AI agent for conversational commerce, built at Sancrisoft. Answers a store's customers 24/7 on web and WhatsApp using the shop's real catalog and policies.",
     longDescription:
-      "A frontend technical assessment in which I built a fully functional healthcare management platform from a provided design and REST API. The dashboard displays a roster of patients with their demographics, and selecting a patient surfaces a rich detail view: a six-month blood pressure history chart with systolic/diastolic trend lines, a diagnostic list table showing conditions, descriptions, and statuses, vital signs cards (respiratory rate, temperature, heart rate) with above/below-average indicators, and a lab results panel covering blood tests, CT scans, and radiology reports. The interface mirrors a production-grade EMR UI with a tabbed navigation bar (Overview, Patients, Schedule, Message, Transactions) and a clean, accessible layout. Built with Next.js and deployed on Netlify. Source code is kept private per assessment confidentiality requirements.",
-    image: "/images/projects/coalitions-assessment.png",
-    tags: ["Next.js", "React", "TypeScript", "REST API", "Healthcare"],
+      "Contributed to the development of Chaski at Sancrisoft, an AI sales agent that online stores plug into their own channels. Merchants connect their catalog — a site link, social profiles, or a photo/PDF of their product list — answer a short set of questions about shipping, payments, hours, and brand tone, then test the agent against real data in a playground before switching it on. Once live, it handles customer messages around the clock in the customer's own language, recommends products, checks orders, and helps close the sale. Answers are grounded strictly in the store's real catalog and policies, with a citation for where each one came from; when the agent does not know something it says so and hands the conversation to a human instead of inventing an answer. Available on web and WhatsApp, with Instagram and Messenger on the way.",
+    image: "/images/projects/chaski.webp",
+    tags: ["Next.js", "React", "Conversational AI", "WhatsApp", "E-commerce"],
     featured: true,
     category: "web",
     links: {
-      demo: "https://assessment-daniel-urbina-fornt.netlify.app/",
+      demo: "https://chaski.sancrisoft.com/",
     },
     date: "2026",
+  },
+  {
+    id: "sancrisoft-website",
+    title: "Sancrisoft Company Website",
+    description:
+      "Corporate website for Sancrisoft, a software development company. Built as part of the development team.",
+    longDescription:
+      "Contributed to building the official corporate website for Sancrisoft, a software development company specializing in custom solutions. The site showcases the company's services, team, and portfolio with a modern, professional design optimized for lead generation and brand presence.",
+    image: "/images/projects/sancrisoft-web.png",
+    tags: ["Next.js", "React", "TypeScript", "Corporate"],
+    featured: true,
+    category: "web",
+    links: {
+      demo: "https://www.sancrisoft.com",
+    },
+    date: "2025",
+  },
+  {
+    id: "cycle-app",
+    title: "Cycle App",
+    description:
+      "A Flutter mobile application for tracking women's menstrual cycles with predictions and health insights.",
+    longDescription:
+      "A comprehensive menstrual cycle tracking app built with Flutter for cross-platform mobile support. Helps users track their periods, predict upcoming cycles, and monitor symptoms. Features an intuitive calendar interface, cycle history, and personalized insights to help women better understand their health patterns.",
+    image: "/images/projects/cycle-app.png",
+    tags: ["Flutter", "Dart", "Mobile", "Health"],
+    featured: true,
+    category: "mobile",
+    links: {
+      github: "https://github.com/DansPlaying/cycleApp",
+    },
+    date: "2024",
   },
   {
     id: "inventory-management",
@@ -35,6 +67,22 @@ export const projects: Project[] = [
     date: "2023",
   },
   {
+    id: "coalitions-assessment",
+    title: "Tech.Care Patient Dashboard",
+    description:
+      "Healthcare patient management dashboard built as a frontend technical assessment. Features real-time vital signs, diagnosis history charts, and lab results.",
+    longDescription:
+      "A frontend technical assessment in which I built a fully functional healthcare management platform from a provided design and REST API. The dashboard displays a roster of patients with their demographics, and selecting a patient surfaces a rich detail view: a six-month blood pressure history chart with systolic/diastolic trend lines, a diagnostic list table showing conditions, descriptions, and statuses, vital signs cards (respiratory rate, temperature, heart rate) with above/below-average indicators, and a lab results panel covering blood tests, CT scans, and radiology reports. The interface mirrors a production-grade EMR UI with a tabbed navigation bar (Overview, Patients, Schedule, Message, Transactions) and a clean, accessible layout. Built with Next.js and deployed on Netlify. Source code is kept private per assessment confidentiality requirements.",
+    image: "/images/projects/coalitions-assessment.png",
+    tags: ["Next.js", "React", "TypeScript", "REST API", "Healthcare"],
+    featured: true,
+    category: "web",
+    links: {
+      demo: "https://assessment-daniel-urbina-fornt.netlify.app/",
+    },
+    date: "2026",
+  },
+  {
     id: "portfolio-website",
     title: "Personal Portfolio",
     description:
@@ -50,22 +98,6 @@ export const projects: Project[] = [
       github: "https://github.com/DansPlaying/DanielUrbinaWeb",
     },
     date: "2026",
-  },
-  {
-    id: "sancrisoft-website",
-    title: "Sancrisoft Company Website",
-    description:
-      "Corporate website for Sancrisoft, a software development company. Built as part of the development team.",
-    longDescription:
-      "Contributed to building the official corporate website for Sancrisoft, a software development company specializing in custom solutions. The site showcases the company's services, team, and portfolio with a modern, professional design optimized for lead generation and brand presence.",
-    image: "/images/projects/sancrisoft-web.png",
-    tags: ["Next.js", "React", "TypeScript", "Corporate"],
-    featured: true,
-    category: "web",
-    links: {
-      demo: "https://www.sancrisoft.com",
-    },
-    date: "2025",
   },
   {
     id: "sancrisoft-business-wizard",
@@ -125,22 +157,6 @@ export const projects: Project[] = [
       github: "https://github.com/21harley/trama-graph",
     },
     date: "2025",
-  },
-  {
-    id: "cycle-app",
-    title: "Cycle App",
-    description:
-      "A Flutter mobile application for tracking women's menstrual cycles with predictions and health insights.",
-    longDescription:
-      "A comprehensive menstrual cycle tracking app built with Flutter for cross-platform mobile support. Helps users track their periods, predict upcoming cycles, and monitor symptoms. Features an intuitive calendar interface, cycle history, and personalized insights to help women better understand their health patterns.",
-    image: "/images/projects/cycle-app.png",
-    tags: ["Flutter", "Dart", "Mobile", "Health"],
-    featured: true,
-    category: "mobile",
-    links: {
-      github: "https://github.com/DansPlaying/cycleApp",
-    },
-    date: "2024",
   },
   {
     id: "ensolvers-notes-app",

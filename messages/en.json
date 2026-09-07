@@ -68,17 +68,23 @@
       "mobile": "Mobile"
     },
     "items": {
-      "coalitions-assessment": {
-        "description": "Healthcare patient management dashboard built as a frontend technical assessment. Features real-time vital signs, diagnosis history charts, and lab results."
+      "chaski": {
+        "description": "AI agent for conversational commerce, built at Sancrisoft. Answers a store's customers 24/7 on web and WhatsApp using the shop's real catalog and policies."
+      },
+      "sancrisoft-website": {
+        "description": "Corporate website for Sancrisoft, a software development company. Built as part of the development team."
+      },
+      "cycle-app": {
+        "description": "A Flutter mobile application for tracking women's menstrual cycles with predictions and health insights."
       },
       "inventory-management": {
         "description": "A comprehensive inventory management system with credit control features. Built with Next.js and Neon database."
       },
+      "coalitions-assessment": {
+        "description": "Healthcare patient management dashboard built as a frontend technical assessment. Features real-time vital signs, diagnosis history charts, and lab results."
+      },
       "portfolio-website": {
         "description": "My personal portfolio website showcasing my work and skills. Built with Next.js, TypeScript, and Tailwind CSS."
-      },
-      "sancrisoft-website": {
-        "description": "Corporate website for Sancrisoft, a software development company. Built as part of the development team."
       },
       "sancrisoft-business-wizard": {
         "description": "Multi-step business registration form built as a technical assessment for Sancrisoft. Features a clean wizard interface with form validation and progress tracking."
@@ -88,9 +94,6 @@
       },
       "trama-graph": {
         "description": "Real-time gas sensor monitoring system with Arduino integration, featuring live data visualization, configurable alerts, and data persistence."
-      },
-      "cycle-app": {
-        "description": "A Flutter mobile application for tracking women's menstrual cycles with predictions and health insights."
       },
       "ensolvers-notes-app": {
         "description": "Full-stack notes application with authentication, tagging, and archiving. Built as a technical assessment for ENSOLVERS."
