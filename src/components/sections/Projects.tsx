@@ -12,6 +12,9 @@ import {
   Phone,
   Users,
   Copyright,
+  Lock,
+  Youtube,
+  Smartphone,
 } from "lucide-react";
 import { useTheme } from "next-themes";
 import { useTranslations } from "next-intl";
@@ -256,6 +259,15 @@ export function Projects() {
                   </span>
                 </>
               )}
+              {active.privateSource && (
+                <>
+                  <span className="text-border">·</span>
+                  <span className="flex items-center gap-1 font-mono text-xs text-text-secondary">
+                    <Lock size={11} className="shrink-0" />
+                    {t("privateSource")}
+                  </span>
+                </>
+              )}
             </div>
 
             <h3 className="text-2xl md:text-3xl font-bold text-text-primary mb-3">
@@ -294,7 +306,7 @@ export function Projects() {
               ))}
             </div>
 
-            <div className="flex items-center justify-center gap-6 mt-5">
+            <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 mt-5">
               {active.links.demo && (
                 <a
                   href={active.links.demo}
@@ -315,6 +327,39 @@ export function Projects() {
                 >
                   <Github size={14} />
                   {t("sourceCode")}
+                </a>
+              )}
+              {active.links.googlePlay && (
+                <a
+                  href={active.links.googlePlay}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-1.5 text-sm font-medium text-accent-cyan hover:text-text-highlight transition-colors"
+                >
+                  <Smartphone size={14} />
+                  {t("googlePlay")}
+                </a>
+              )}
+              {active.links.videoOverview && (
+                <a
+                  href={active.links.videoOverview}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-1.5 text-sm font-medium text-accent-cyan hover:text-text-highlight transition-colors"
+                >
+                  <Youtube size={14} />
+                  {t("videoOverview")}
+                </a>
+              )}
+              {active.links.videoTeam && (
+                <a
+                  href={active.links.videoTeam}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-1.5 text-sm font-medium text-accent-cyan hover:text-text-highlight transition-colors"
+                >
+                  <Youtube size={14} />
+                  {t("videoTeam")}
                 </a>
               )}
             </div>

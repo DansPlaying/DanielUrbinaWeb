@@ -104,6 +104,32 @@ export const projects: Project[] = [
     date: "2026",
   },
   {
+    id: "centinela",
+    title: "Centinela — El Guardián de los Páramos",
+    description:
+      "Flutter app for Centinela, an IoT platform that monitors high-Andean páramo forests. Shows live readings from field sensors — CO₂, humidity, temperature, and rainfall — tied to each plot and device.",
+    longDescription:
+      "Centinela, el Guardián de los Páramos, is an environmental monitoring platform for the high-Andean páramos — the moorland forests that regulate the water supply for much of Colombia and Venezuela. Sensors installed in the field feed an IoT network that measures and quantifies the real impact of the money stakeholders put into conservation, combining machine learning, AI, big data, pattern recognition, and satellite image analysis to turn raw readings into something a landowner or an investor can act on. I built the Flutter client that puts all of that in the hands of the people on the ground: register and sign in, then see the páramo's current conditions, browse your plots with their surveyed area and satellite boundary polygons, drill into each registered sensor by its coordinates, and read temperature and relative-humidity time series charted by day or month. A plot view rolls the sensor network up into the numbers that matter — carbon dioxide, relative humidity, relative temperature, and precipitation — over a map that locates the plot in the wider region, alongside an in-app support channel. Firebase handles authentication and real-time data for the client, with AWS behind the sensor ingestion and processing pipeline. The app is published on Google Play; the source is private.",
+    image: "/images/projects/centinela.webp",
+    tags: ["Flutter", "Dart", "Firebase", "AWS", "IoT", "Sustainability"],
+    featured: true,
+    realProject: true,
+    privateSource: true,
+    rightsHolder: "Centinela El Guardián de los Páramos",
+    category: "mobile",
+    links: {
+      googlePlay:
+        "https://play.google.com/store/apps/details?id=com.digitalnode.centinela_client",
+      videoOverview: "https://www.youtube.com/watch?v=z-UttIzncic",
+      videoTeam: "https://www.youtube.com/watch?v=GQoekrKiF3Y",
+    },
+    contact: {
+      name: "Melvick Ocanto",
+      email: "melvick.ocanto@infinitics.com.ve",
+    },
+    date: "2023",
+  },
+  {
     id: "cycle-app",
     title: "Cycle App",
     description:

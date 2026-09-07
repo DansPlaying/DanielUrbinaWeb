@@ -68,6 +68,10 @@
     "teamRightsNotice": "Desarrollado como parte del equipo de desarrollo de {company} — el proyecto y todos sus derechos pertenecen a <highlight>{owner}</highlight>.",
     "teamClientRightsNotice": "Desarrollado como parte del equipo de desarrollo de {company}. <highlight>© {owner}. Todos los derechos reservados.</highlight> No poseo derechos ni propiedad sobre el producto.",
     "rightsNotice": "El proyecto y todos sus derechos pertenecen a <highlight>{owner}</highlight>.",
+    "privateSource": "Código Privado",
+    "googlePlay": "Google Play",
+    "videoOverview": "Video del Proyecto",
+    "videoTeam": "Video del Equipo",
     "devTeam": "Equipo de Desarrollo",
     "referenceContact": "Contacto de referencia",
     "realProject": "Proyecto Real",
@@ -89,6 +93,9 @@
       },
       "pwrl": {
         "description": "Sitio web para inversionistas de PWRL (Nasdaq: PWRL), un fondo cerrado que da a inversionistas públicos exposición a empresas tecnológicas privadas. Desarrollado con el equipo de desarrollo de Sancrisoft."
+      },
+      "centinela": {
+        "description": "Aplicación Flutter para Centinela, una plataforma IoT que monitorea los páramos andinos. Muestra lecturas en vivo de los sensores de campo — CO₂, humedad, temperatura y precipitación — asociadas a cada lote y dispositivo."
       },
       "cycle-app": {
         "description": "Aplicación móvil Flutter para rastrear ciclos menstruales con predicciones e información de salud."

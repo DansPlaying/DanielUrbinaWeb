@@ -12,7 +12,14 @@ export interface Project {
   links: {
     demo?: string;
     github?: string;
+    googlePlay?: string;
+    /** Video explaining the product. */
+    videoOverview?: string;
+    /** Video presenting the team behind it. */
+    videoTeam?: string;
   };
+  /** True when the source is closed and cannot be shared. */
+  privateSource?: boolean;
   /** True when the work was delivered as part of a company development team, not solo. */
   teamProject?: boolean;
   /** Company that owns the product and its rights, when the work was done for a client or employer. */
