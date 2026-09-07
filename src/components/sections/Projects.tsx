@@ -3,7 +3,16 @@
 import { useState, useCallback, useEffect } from "react";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
-import { ExternalLink, Github, ChevronLeft, ChevronRight } from "lucide-react";
+import {
+  ExternalLink,
+  Github,
+  ChevronLeft,
+  ChevronRight,
+  Mail,
+  Phone,
+  Users,
+  Copyright,
+} from "lucide-react";
 import { useTheme } from "next-themes";
 import { useTranslations } from "next-intl";
 import { SectionHeading } from "@/components/ui/SectionHeading";
@@ -11,6 +20,14 @@ import { ScrollReveal } from "@/components/ui/ScrollReveal";
 import { CybercoreGrid } from "@/components/ui/CybercoreGrid";
 import { projects } from "@/data/projects";
 import { Project } from "@/lib/types";
+
+/** Which rights notice fits: solo work, team work for the same company, or team work for a client. */
+function rightsNoticeKey(project: Project) {
+  if (!project.teamProject) return "rightsNotice";
+  return project.teamCompany && project.teamCompany !== project.rightsHolder
+    ? "teamClientRightsNotice"
+    : "teamRightsNotice";
+}
 
 const CARD_W = 380;
 const CARD_H = 256;
@@ -222,7 +239,7 @@ export function Projects() {
             transition={{ duration: 0.38, ease: [0.16, 1, 0.3, 1] }}
             className="mt-6 text-center max-w-2xl mx-auto"
           >
-            <div className="flex items-center justify-center gap-2 mb-2">
+            <div className="flex flex-wrap items-center justify-center gap-x-2 gap-y-1 mb-2">
               <span className="font-mono text-xs text-accent-cyan">
                 {active.date}
               </span>
@@ -230,6 +247,15 @@ export function Projects() {
               <span className="font-mono text-xs text-text-secondary capitalize">
                 {t(`categories.${active.category}`)}
               </span>
+              {active.teamProject && (
+                <>
+                  <span className="text-border">·</span>
+                  <span className="flex items-center gap-1 font-mono text-xs text-accent-cyan/90">
+                    <Users size={11} className="shrink-0" />
+                    {t("devTeam")}
+                  </span>
+                </>
+              )}
             </div>
 
             <h3 className="text-2xl md:text-3xl font-bold text-text-primary mb-3">
@@ -239,6 +265,23 @@ export function Projects() {
             <p className="text-text-secondary leading-relaxed text-sm md:text-base">
               {t(`items.${active.id}.description`)}
             </p>
+
+            {active.rightsHolder && (
+              <p className="flex items-start justify-center gap-1.5 mt-3 text-xs text-text-secondary/70 leading-relaxed">
+                <Copyright size={12} className="shrink-0 mt-0.5" />
+                <span>
+                  {t.rich(rightsNoticeKey(active), {
+                    company: active.teamCompany ?? active.rightsHolder,
+                    owner: active.rightsHolder,
+                    highlight: (chunks) => (
+                      <span className="text-text-highlight font-semibold">
+                        {chunks}
+                      </span>
+                    ),
+                  })}
+                </span>
+              </p>
+            )}
 
             <div className="flex flex-wrap justify-center gap-2 mt-4">
               {active.tags.map((tag) => (
@@ -260,7 +303,7 @@ export function Projects() {
                   className="flex items-center gap-1.5 text-sm font-medium text-accent-cyan hover:text-text-highlight transition-colors"
                 >
                   <ExternalLink size={14} />
-                  {t("liveDemo")}
+                  {t(active.realProject ? "realProject" : "liveDemo")}
                 </a>
               )}
               {active.links.github && (
@@ -275,6 +318,40 @@ export function Projects() {
                 </a>
               )}
             </div>
+
+            {active.contact && (active.contact.email || active.contact.phone) && (
+              <div className="mt-5 pt-4 border-t border-border/50">
+                <p className="font-mono text-[11px] uppercase tracking-wider text-text-secondary/70">
+                  {t("referenceContact")}
+                </p>
+                <div className="flex flex-wrap items-center justify-center gap-x-4 gap-y-1 mt-1.5">
+                  {active.contact.name && (
+                    <span className="text-sm text-text-secondary">
+                      {active.contact.name}
+                      {active.contact.role && ` — ${active.contact.role}`}
+                    </span>
+                  )}
+                  {active.contact.email && (
+                    <a
+                      href={`mailto:${active.contact.email}`}
+                      className="flex items-center gap-1.5 text-sm text-accent-cyan hover:text-text-highlight transition-colors break-all"
+                    >
+                      <Mail size={13} className="shrink-0" />
+                      {active.contact.email}
+                    </a>
+                  )}
+                  {active.contact.phone && (
+                    <a
+                      href={`tel:${active.contact.phone.replace(/[^+\d]/g, "")}`}
+                      className="flex items-center gap-1.5 text-sm text-accent-cyan hover:text-text-highlight transition-colors"
+                    >
+                      <Phone size={13} className="shrink-0" />
+                      {active.contact.phone}
+                    </a>
+                  )}
+                </div>
+              </div>
+            )}
           </motion.div>
         </AnimatePresence>
       </div>

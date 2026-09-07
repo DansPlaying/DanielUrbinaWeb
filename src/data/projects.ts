@@ -11,9 +11,17 @@ export const projects: Project[] = [
     image: "/images/projects/chaski.webp",
     tags: ["Next.js", "React", "Conversational AI", "WhatsApp", "E-commerce"],
     featured: true,
+    realProject: true,
+    teamProject: true,
+    rightsHolder: "Sancrisoft",
     category: "web",
     links: {
       demo: "https://chaski.sancrisoft.com/",
+    },
+    contact: {
+      name: "Sancrisoft",
+      email: "info@sancrisoft.com",
+      phone: "+1 (754) 273-7633",
     },
     date: "2026",
   },
@@ -27,11 +35,66 @@ export const projects: Project[] = [
     image: "/images/projects/sancrisoft-web.png",
     tags: ["Next.js", "React", "TypeScript", "Corporate"],
     featured: true,
+    realProject: true,
+    teamProject: true,
+    rightsHolder: "Sancrisoft",
     category: "web",
     links: {
       demo: "https://www.sancrisoft.com",
     },
+    contact: {
+      name: "Sancrisoft",
+      email: "info@sancrisoft.com",
+      phone: "+1 (754) 273-7633",
+    },
     date: "2025",
+  },
+  {
+    id: "infinitics-app",
+    title: "Infinitics Self-Service & Payments App",
+    description:
+      "Billing and self-service platform for Infinitics, a Venezuelan internet provider. Handles automated and manually reported payments, support tickets, and a Next.js admin panel with CRM.",
+    longDescription:
+      "A production platform used every month by the subscribers of Infinitics (infinitics.com.ve), a CONATEL-licensed wireless internet provider operating in Táchira, Venezuela. The customer app is built with Flutter and shipped to both web and mobile from a single codebase: each subscriber can switch between the services registered under their name, review their plan, see the amount due for the current month and their cut-off day, and settle the bill without calling an agent. Payments are the heart of the product and run on two tracks. Automated rails such as Zelle are matched and cleared without human intervention, while the manually reported channels that dominate the Venezuelan market — Pago Móvil, Bancolombia, and international bank transfers — let the customer submit a reference that the operations team verifies from the back office, keeping the product usable under local banking constraints instead of forcing a single card processor. Around that, the app covers payment history, support tickets, internal VPN provisioning, and IP details. On the operations side I contributed to the Next.js admin panel and its CRM: subscriber and service records, payment reconciliation and verification queues, and ticket handling — with Firebase (Auth, Firestore, Cloud Functions, and Hosting) as the shared backend behind both clients. Work on the platform is ongoing, delivered as improvements requested by the business.",
+    image: "/images/projects/infinitics.webp",
+    tags: ["Flutter", "Dart", "Firebase", "Next.js", "Payments", "CRM"],
+    featured: true,
+    realProject: true,
+    rightsHolder: "Infinitics",
+    category: "mobile",
+    links: {
+      demo: "https://app-infinitics-web.web.app",
+    },
+    contact: {
+      name: "Melvick Ocanto",
+      email: "melvick.ocanto@infinitics.com.ve",
+    },
+    date: "2025",
+  },
+  {
+    id: "pwrl",
+    title: "PWRL — Powerlaw Funds",
+    description:
+      "Investor-facing website for PWRL (Nasdaq: PWRL), a closed-end fund giving public investors exposure to private tech companies. Built with the Sancrisoft development team.",
+    longDescription:
+      "Contributed, as part of the Sancrisoft development team, to the public website of Powerlaw Corp. — a Nasdaq-listed closed-end fund whose pitch is access, through a single publicly traded ticker, to private technology companies that retail investors normally cannot reach: SpaceX, OpenAI, Stripe, Databricks, Figma, Perplexity, Waymo, and others. The site has to serve two audiences at once. For prospective investors it explains the fund's vision, its portfolio holdings, and how to trade the stock. For existing shareholders and regulators it acts as an investor-relations hub, surfacing monthly NAV reporting, quarterly portfolio disclosures, SEC filings, board and governance information, and the risk disclaimers a regulated fund is required to publish. Because the audience skews broad and the content is financial and legally sensitive, accessibility and clarity were treated as requirements rather than polish: I worked on the front end applying WCAG 2.1 AA standards — keyboard navigation, ARIA labelling, and sufficient color contrast over the site's dark, image-heavy hero treatments — so the disclosures stay readable for every visitor.",
+    image: "/images/projects/pwrl.webp",
+    tags: ["Next.js", "React", "TypeScript", "Accessibility", "Fintech"],
+    featured: true,
+    realProject: true,
+    teamProject: true,
+    rightsHolder: "Powerlaw Corp",
+    teamCompany: "Sancrisoft",
+    category: "web",
+    links: {
+      demo: "https://www.powerlawfunds.com/pwrl",
+    },
+    contact: {
+      name: "Sancrisoft",
+      email: "info@sancrisoft.com",
+      phone: "+1 (754) 273-7633",
+    },
+    date: "2026",
   },
   {
     id: "cycle-app",
@@ -92,6 +155,7 @@ export const projects: Project[] = [
     image: "/images/projects/personal-portfolio.png",
     tags: ["Next.js", "React", "TypeScript", "Tailwind CSS", "Framer Motion"],
     featured: true,
+    rightsHolder: "Daniel Urbina",
     category: "web",
     links: {
       demo: "#top",

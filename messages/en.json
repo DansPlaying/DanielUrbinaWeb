@@ -61,6 +61,12 @@
     "highlight": "Projects",
     "description": "A selection of projects I've built",
     "liveDemo": "Live Demo",
+    "teamRightsNotice": "Built as part of the {company} development team — the project and all rights to it belong to <highlight>{owner}</highlight>.",
+    "teamClientRightsNotice": "Built as part of the {company} development team. <highlight>© {owner}. All Rights Reserved.</highlight> I hold no ownership or rights over the product.",
+    "rightsNotice": "The project and all rights to it belong to <highlight>{owner}</highlight>.",
+    "devTeam": "Development Team",
+    "referenceContact": "Reference contact",
+    "realProject": "Real Project",
     "sourceCode": "Source Code",
     "categories": {
       "web": "Web",
@@ -73,6 +79,12 @@
       },
       "sancrisoft-website": {
         "description": "Corporate website for Sancrisoft, a software development company. Built as part of the development team."
+      },
+      "infinitics-app": {
+        "description": "Billing and self-service platform for Infinitics, a Venezuelan internet provider. Handles automated and manually reported payments, support tickets, and a Next.js admin panel with CRM."
+      },
+      "pwrl": {
+        "description": "Investor-facing website for PWRL (Nasdaq: PWRL), a closed-end fund giving public investors exposure to private tech companies. Built with the Sancrisoft development team."
       },
       "cycle-app": {
         "description": "A Flutter mobile application for tracking women's menstrual cycles with predictions and health insights."

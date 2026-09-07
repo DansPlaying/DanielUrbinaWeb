@@ -65,6 +65,12 @@
     "highlight": "Destacados",
     "description": "Una selección de proyectos que he construido",
     "liveDemo": "Demo en Vivo",
+    "teamRightsNotice": "Desarrollado como parte del equipo de desarrollo de {company} — el proyecto y todos sus derechos pertenecen a <highlight>{owner}</highlight>.",
+    "teamClientRightsNotice": "Desarrollado como parte del equipo de desarrollo de {company}. <highlight>© {owner}. Todos los derechos reservados.</highlight> No poseo derechos ni propiedad sobre el producto.",
+    "rightsNotice": "El proyecto y todos sus derechos pertenecen a <highlight>{owner}</highlight>.",
+    "devTeam": "Equipo de Desarrollo",
+    "referenceContact": "Contacto de referencia",
+    "realProject": "Proyecto Real",
     "sourceCode": "Código Fuente",
     "categories": {
       "web": "Web",
@@ -77,6 +83,12 @@
       },
       "sancrisoft-website": {
         "description": "Sitio web corporativo de Sancrisoft, una empresa de desarrollo de software. Construido como parte del equipo de desarrollo."
+      },
+      "infinitics-app": {
+        "description": "Plataforma de facturación y autogestión para Infinitics, un proveedor de internet venezolano. Gestiona pagos automatizados y reportados manualmente, tickets de soporte y un panel administrativo en Next.js con CRM."
+      },
+      "pwrl": {
+        "description": "Sitio web para inversionistas de PWRL (Nasdaq: PWRL), un fondo cerrado que da a inversionistas públicos exposición a empresas tecnológicas privadas. Desarrollado con el equipo de desarrollo de Sancrisoft."
       },
       "cycle-app": {
         "description": "Aplicación móvil Flutter para rastrear ciclos menstruales con predicciones e información de salud."
