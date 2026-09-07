@@ -46,13 +46,23 @@ const packages = [
     github: "https://github.com/DansPlaying/strapi-plugin-relation-publish",
     tags: ["strapi-v5", "relation", "content-manager"],
   },
+  {
+    name: "strapi-plugin-media-usage",
+    shortName: "media-usage",
+    version: "1.0.6",
+    description:
+      "Tracks where each media file is used across content types in Strapi v5, so you know what breaks before deleting an asset.",
+    npm: "https://www.npmjs.com/package/strapi-plugin-media-usage",
+    github: "https://github.com/DansPlaying/strapi-plugin-media-usage",
+    tags: ["strapi-v5", "media", "upload"],
+  },
 ];
 
-// Duplicate to fill 6 slots for the 3D ring
+// Duplicate to fill 8 slots for the 3D ring
 const ITEMS = [...packages, ...packages];
-const N = ITEMS.length; // 6
-const ANGLE_STEP = 360 / N; // 60°
-const RADIUS = 320; // px — tuned so side cards stay within max-w-7xl on lg+
+const N = ITEMS.length; // 8
+const ANGLE_STEP = 360 / N; // 45°
+const RADIUS = 360; // px — tuned so side cards stay within max-w-7xl on lg+
 
 function PackageCard({
   pkg,

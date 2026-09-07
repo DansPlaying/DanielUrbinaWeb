@@ -3,6 +3,7 @@
     "openSource": "Código Abierto",
     "about": "Sobre mí",
     "skills": "Habilidades",
+    "certifications": "Certificaciones",
     "projects": "Proyectos",
     "experience": "Experiencia"
   },
@@ -40,11 +41,21 @@
     "highlight": "Tecnologías",
     "description": "Las herramientas y tecnologías con las que trabajo"
   },
+  "certifications": {
+    "badge": "Credenciales Verificadas",
+    "title": "Certificaciones &",
+    "highlight": "Insignias",
+    "description": "Insignias de habilidades verificadas y certificaciones emitidas por Contentful y MongoDB — cada una enlaza a su registro público en Credly",
+    "issued": "Emitida",
+    "verifyOn": "verificar en",
+    "listLabel": "Insignias de certificación verificadas",
+    "footer": "Todas las credenciales verificables en"
+  },
   "openSource": {
     "badge": "Contribuidor Open Source",
     "title": "Paquetes",
     "highlight": "NPM",
-    "description": "3 plugins open source de Strapi v5 publicados en el registro NPM — solucionando brechas reales en el ecosistema de Strapi",
+    "description": "4 plugins open source de Strapi v5 publicados en el registro NPM — solucionando brechas reales en el ecosistema de Strapi",
     "footer": "Todos los paquetes disponibles en",
     "npm": "NPM",
     "github": "GitHub"

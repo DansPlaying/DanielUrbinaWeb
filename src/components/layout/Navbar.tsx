@@ -21,6 +21,11 @@ export function Navbar() {
     { label: t("openSource"), href: "#open-source", id: "open-source" },
     { label: t("about"), href: "#about", id: "about" },
     { label: t("skills"), href: "#skills", id: "skills" },
+    {
+      label: t("certifications"),
+      href: "#certifications",
+      id: "certifications",
+    },
     { label: t("projects"), href: "#projects", id: "projects" },
     { label: t("experience"), href: "#experience", id: "experience" },
   ];

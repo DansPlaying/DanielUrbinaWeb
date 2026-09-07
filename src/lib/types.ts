@@ -37,3 +37,14 @@ export interface Social {
   icon: string;
   username?: string;
 }
+
+export interface Certification {
+  id: string;
+  name: string;
+  shortName: string;
+  issuer: string;
+  image: string;
+  url: string;
+  issuedDate: string;
+  expiresDate?: string;
+}

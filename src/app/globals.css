@@ -84,6 +84,59 @@
   }
 }
 
+/* Infinite badge marquee (Certifications section)
+   The track holds two identical copies of the list, so shifting it by -50%
+   lands exactly on the start of the second copy — a seamless wrap. */
+@keyframes marquee-scroll {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
+.marquee-viewport {
+  overflow: hidden;
+  padding: 0.5rem 1rem;
+}
+
+.marquee-track {
+  animation: marquee-scroll linear infinite;
+  will-change: transform;
+}
+
+.marquee-viewport:hover .marquee-track,
+.marquee-viewport:focus-within .marquee-track {
+  animation-play-state: paused;
+}
+
+/* Fade the belt out at both edges instead of cutting it off.
+   The fade is narrower on phones, where 6rem would swallow a whole card. */
+.marquee-mask {
+  --marquee-fade: 2.5rem;
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent,
+    #000 var(--marquee-fade),
+    #000 calc(100% - var(--marquee-fade)),
+    transparent
+  );
+  mask-image: linear-gradient(
+    to right,
+    transparent,
+    #000 var(--marquee-fade),
+    #000 calc(100% - var(--marquee-fade)),
+    transparent
+  );
+}
+
+@media (min-width: 768px) {
+  .marquee-mask {
+    --marquee-fade: 6rem;
+  }
+}
+
 /* Theme switch — circular wipe from toggle button position */
 ::view-transition-old(root) {
   animation: none;
@@ -118,5 +171,16 @@
   ::view-transition-old(root),
   ::view-transition-new(root) {
     animation: none !important;
+  }
+
+  /* A frozen marquee would hide most badges — hand scrolling over instead. */
+  .marquee-track {
+    animation: none !important;
+    transform: none !important;
+    width: max-content;
+  }
+
+  .marquee-viewport {
+    overflow-x: auto;
   }
 }
