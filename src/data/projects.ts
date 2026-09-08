@@ -136,6 +136,29 @@ export const projects: Project[] = [
     date: "2023",
   },
   {
+    id: "saldo-rapido",
+    title: "Saldo Rápido",
+    description:
+      "Prepaid wallet app for the Venezuelan market, built with the Digital Node development team. Fund a balance in bolívares with a BDV card or Pago Móvil, then spend it on mobile top-ups and utility bills from a Firestore-driven services grid.",
+    longDescription:
+      "Saldo Rápido is a prepaid wallet for the Venezuelan market, built on one deliberate idea: fund a balance in bolívares once, then spend it on the services people pay for every month without re-entering payment details at each transaction. I worked on the Flutter client as part of the Digital Node development team. The wallet is the anchor of the product — the balance sits in the home header and is topped up through two rails chosen for how payments actually work locally: a BDV card payment handed off to the bank's own gateway inside a webview, or Pago Móvil, the mobile transfer channel most Venezuelans use in practice. Below the wallet, the home screen renders a services grid driven by a Firestore `servicios` collection, so the catalog can grow or a provider can be taken offline from the backend without shipping a new build. Every service follows the same three-step shape — pick a number or account, pick an amount, confirm: mobile top-ups for Digitel, Movistar, and Movilnet, including an SMS-based flow and the option to pull a number straight from the phone's contacts; bill payments for Cantv landlines, SimpleTV, and Inter by subscription number; and redirect-style flows with on-screen instructions for Netflix and Spotify. Around that core, Movimientos gives a transaction history that separates recargas, pagos, and devoluciones with their amounts and dates; notifications arrive as push through Firebase Messaging and are mirrored in an in-app bell and drawer; and the profile area carries account information alongside direct WhatsApp and phone support links. Authentication runs on Firebase with email/password, Google, and Apple sign-in, and an auth guard gates the whole app behind the welcome and login screens. A Premios rewards feature — points and reward-exchange dialogs — is fully present in the codebase but commented out of the bottom navigation, so it ships dormant rather than reachable in the current build. The source is private.",
+    image: "/images/projects/saldo-rapido.webp",
+    tags: ["Flutter", "Dart", "Firebase", "Firestore", "Payments", "Fintech"],
+    featured: true,
+    realProject: true,
+    teamProject: true,
+    teamCompany: "Digital Node",
+    privateSource: true,
+    rightsHolder: "Saldo Rápido",
+    category: "mobile",
+    links: {},
+    contact: {
+      name: "Melvick Ocanto",
+      email: "melvick.ocanto@infinitics.com.ve",
+    },
+    date: "2024",
+  },
+  {
     id: "cycle-app",
     title: "Cycle App",
     description:

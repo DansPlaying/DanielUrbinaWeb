@@ -93,6 +93,9 @@
       "centinela": {
         "description": "Flutter app for Centinela, an IoT platform that monitors high-Andean páramo forests. Shows live readings from field sensors — CO₂, humidity, temperature, and rainfall — tied to each plot and device."
       },
+      "saldo-rapido": {
+        "description": "Prepaid wallet app for the Venezuelan market, built with the Digital Node development team. Fund a balance in bolívares with a BDV card or Pago Móvil, then spend it on mobile top-ups and utility bills from a Firestore-driven services grid."
+      },
       "cycle-app": {
         "description": "A Flutter mobile application for tracking women's menstrual cycles with predictions and health insights."
       },

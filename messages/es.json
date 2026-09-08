@@ -97,6 +97,9 @@
       "centinela": {
         "description": "Aplicación Flutter para Centinela, una plataforma IoT que monitorea los páramos andinos. Muestra lecturas en vivo de los sensores de campo — CO₂, humedad, temperatura y precipitación — asociadas a cada lote y dispositivo."
       },
+      "saldo-rapido": {
+        "description": "Aplicación de monedero prepago para el mercado venezolano, desarrollada con el equipo de desarrollo de Digital Node. Recarga saldo en bolívares con tarjeta BDV o Pago Móvil y págalo en recargas móviles y servicios básicos desde una cuadrícula de servicios gestionada en Firestore."
+      },
       "cycle-app": {
         "description": "Aplicación móvil Flutter para rastrear ciclos menstruales con predicciones e información de salud."
       },
