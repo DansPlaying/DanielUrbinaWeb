@@ -49,7 +49,7 @@ const packages = [
   {
     name: "strapi-plugin-media-usage",
     shortName: "media-usage",
-    version: "1.0.6",
+    version: "1.0.7",
     description:
       "Tracks where each media file is used across content types in Strapi v5, so you know what breaks before deleting an asset.",
     npm: "https://www.npmjs.com/package/strapi-plugin-media-usage",
@@ -313,7 +313,8 @@ export function OpenSource() {
           {/* Perspective viewport */}
           <div
             className="flex items-center justify-center"
-            style={{ height: "380px", perspective: "1000px" }}
+            /* height fits the front card magnified by perspective: 340px * 1000/(1000-360) = 531px */
+            style={{ height: "560px", perspective: "1000px" }}
           >
             {/* Prev */}
             <button
@@ -393,7 +394,7 @@ export function OpenSource() {
 
         {/* Footer */}
         <ScrollReveal delay={0.3}>
-          <p className="text-center text-text-secondary text-xs mt-8 pb-4 font-mono pt-4">
+          <p className="text-center text-text-secondary text-xs mt-10 pb-6 font-mono pt-4">
             <span className="text-accent-purple">&gt;</span> {t("footer")}{" "}
             <a
               href="https://www.npmjs.com/~dans007"
