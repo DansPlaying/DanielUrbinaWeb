@@ -70,3 +70,9 @@ export interface Certification {
   issuedDate: string;
   expiresDate?: string;
 }
+
+// A group of certifications from one issuer — rendered as its own marquee row.
+export interface CertificationRow {
+  issuer: string;
+  items: Certification[];
+}

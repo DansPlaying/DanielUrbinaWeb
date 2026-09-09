@@ -5,12 +5,27 @@ import { ExternalLink, ShieldCheck } from "lucide-react";
 import { useLocale, useTranslations } from "next-intl";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { ScrollReveal } from "@/components/ui/ScrollReveal";
-import { certifications, CREDLY_PROFILE_URL } from "@/data/certifications";
-import { Certification } from "@/lib/types";
+import { certificationRows, CREDLY_PROFILE_URL } from "@/data/certifications";
+import { Certification, CertificationRow } from "@/lib/types";
 
 // Seconds per card — total loop duration scales with the number of badges so
-// the belt always moves at the same perceived speed.
+// every belt moves at the same perceived speed regardless of how many cards
+// its issuer has.
 const SECONDS_PER_CARD = 6;
+
+// Rendered width of one card slot: the 220px card plus its 10px side padding.
+const CARD_SLOT_WIDTH = 240;
+
+// Widest viewport the belt has to stay filled on. The track needs enough
+// copies that the ones to the left of the wrap point still span this much,
+// or a short row would show empty space just before the loop restarts.
+const MAX_VIEWPORT_WIDTH = 2560;
+
+// How many times to repeat a row so its loop is seamless everywhere.
+function copiesFor(count: number): number {
+  const copyWidth = count * CARD_SLOT_WIDTH;
+  return Math.max(2, Math.ceil(MAX_VIEWPORT_WIDTH / copyWidth) + 1);
+}
 
 function formatIssued(date: string, locale: string): string {
   const [year, month, day] = date.split("-").map(Number);
@@ -65,13 +80,69 @@ function BadgeCard({ cert }: { cert: Certification }) {
   );
 }
 
-export function Certifications() {
+function BadgeRow({ row, reverse }: { row: CertificationRow; reverse: boolean }) {
   const t = useTranslations("certifications");
 
-  // Two identical copies → translating the track by -50% lands exactly on the
-  // start of the second copy, so the loop is seamless.
-  const track = [...certifications, ...certifications];
-  const duration = certifications.length * SECONDS_PER_CARD;
+  const copies = copiesFor(row.items.length);
+  const track = Array.from({ length: copies }, () => row.items).flat();
+
+  return (
+    <div>
+      {/* Issuer label, aligned to the page container rather than the
+          full-bleed belt below it. */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex items-center gap-3">
+          <h3 className="font-mono text-xs uppercase tracking-[0.15em] text-text-secondary">
+            {row.issuer}
+          </h3>
+          <span className="h-px flex-grow bg-border" aria-hidden="true" />
+          <span
+            className="font-mono text-[11px] text-text-secondary"
+            aria-hidden="true"
+          >
+            {row.items.length}
+          </span>
+        </div>
+      </div>
+
+      {/* Infinite marquee — full-bleed, edges faded out */}
+      <div className="marquee-mask mt-3">
+        <div
+          className="marquee-viewport"
+          role="list"
+          aria-label={`${row.issuer} — ${t("listLabel")}`}
+        >
+          <div
+            className={`marquee-track flex w-max${reverse ? " marquee-track--reverse" : ""}`}
+            style={{
+              animationDuration: `${row.items.length * SECONDS_PER_CARD}s`,
+              // Shifting by exactly one copy makes the wrap seamless.
+              ["--marquee-shift" as string]: `-${100 / copies}%`,
+            }}
+          >
+            {track.map((cert, i) => (
+              // Spacing lives on the item, not as a flex `gap`, so one copy
+              // measures exactly 100%/copies of the track and the wrap is
+              // seamless.
+              <div
+                key={`${cert.id}-${i}`}
+                role="listitem"
+                className="px-2.5"
+                // Copies after the first are visual duplicates — hide from AT.
+                aria-hidden={i >= row.items.length}
+              >
+                <BadgeCard cert={cert} />
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+export function Certifications() {
+  const t = useTranslations("certifications");
 
   return (
     <section
@@ -111,33 +182,14 @@ export function Certifications() {
           </ScrollReveal>
         </div>
 
-        {/* Infinite marquee — full-bleed, edges faded out */}
-        <ScrollReveal delay={0.1} className="marquee-mask mt-2">
-          <div
-            className="marquee-viewport"
-            role="list"
-            aria-label={t("listLabel")}
-          >
-            <div
-              className="marquee-track flex w-max"
-              style={{ animationDuration: `${duration}s` }}
-            >
-              {track.map((cert, i) => (
-                // Spacing lives on the item, not as a flex `gap`, so one copy
-                // measures exactly 50% of the track and the wrap is seamless.
-                <div
-                  key={`${cert.id}-${i}`}
-                  role="listitem"
-                  className="px-2.5"
-                  // The second copy is a visual duplicate — hide it from AT.
-                  aria-hidden={i >= certifications.length}
-                >
-                  <BadgeCard cert={cert} />
-                </div>
-              ))}
-            </div>
-          </div>
-        </ScrollReveal>
+        {/* One belt per issuer, alternating direction */}
+        <div className="mt-6 space-y-8">
+          {certificationRows.map((row, i) => (
+            <ScrollReveal key={row.issuer} delay={0.1 + i * 0.05}>
+              <BadgeRow row={row} reverse={i % 2 === 1} />
+            </ScrollReveal>
+          ))}
+        </div>
 
         {/* Footer */}
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
