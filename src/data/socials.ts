@@ -3,6 +3,11 @@ import { Social } from "@/lib/types";
 // Social links loaded from environment variables to avoid indexation
 export const socials: Social[] = [
   {
+    name: "Upwork",
+    url: process.env.NEXT_PUBLIC_UPWORK_URL || "",
+    icon: "Upwork",
+  },
+  {
     name: "GitHub",
     url: process.env.NEXT_PUBLIC_GITHUB_URL || "",
     icon: "Github",

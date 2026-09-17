@@ -25,10 +25,10 @@ import {
   Figma,
   Boxes,
 } from "lucide-react";
-import { type LucideProps } from "lucide-react";
+import { SiUpwork } from "react-icons/si";
 import { type ComponentType } from "react";
 
-const iconMap: Record<string, ComponentType<LucideProps>> = {
+const iconMap: Record<string, ComponentType<{ size?: string | number }>> = {
   Github,
   Linkedin,
   Twitter,
@@ -54,6 +54,7 @@ const iconMap: Record<string, ComponentType<LucideProps>> = {
   Layout,
   Figma,
   Boxes,
+  Upwork: SiUpwork,
 };
 
 interface SocialIconProps {
